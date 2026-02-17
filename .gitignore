@@ -1,0 +1,48 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.egg
+dist/
+build/
+
+# Virtual environment
+.venv/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# AWS
+.aws/
+
+# Data (large files — never commit)
+*.parquet
+*.csv
+*.h5
+*.hdf5
+*.pkl
+*.pickle
+
+# Model artifacts (never commit — use model registry)
+*.pt
+*.pth
+*.onnx
+*.joblib
+
+# Research notebooks checkpoints
+.ipynb_checkpoints/
+
+# Environment variables
+.env
+.env.*
+
+# Logs
+*.log
+logs/

@@ -1,0 +1,48 @@
+# Oracle-V Feature Registry v1.0
+# Authority: Data Contract §4.4 (canonical IDs and column names)
+# Created: 2026-02-20
+# See docs/FEATURE_ID_RECONCILIATION.md for rationale
+
+# Family 1 — IV Surface (9 Core + 2 Extension)
+OV-F-101: {column: riv_level, family: 1, importance: CRITICAL, set: core, availability: immediate}
+OV-F-102: {column: riv_change_1d, family: 1, importance: CRITICAL, set: core, availability: immediate}
+OV-F-103: {column: riv_change_3d, family: 1, importance: STANDARD, set: core, availability: immediate}
+OV-F-104: {column: riv_change_5d, family: 1, importance: STANDARD, set: extension, availability: deferred}
+OV-F-105: {column: iv_percentile_rank, family: 1, importance: CRITICAL, set: core, availability: immediate}
+OV-F-106: {column: iv_term_structure_slope, family: 1, importance: STANDARD, set: core, availability: immediate}
+OV-F-107: {column: india_vix_level, family: 1, importance: STANDARD, set: core, availability: deferred_source}
+OV-F-108: {column: india_vix_percentile_rank, family: 1, importance: STANDARD, set: core, availability: deferred_source}
+OV-F-109: {column: india_vix_change, family: 1, importance: STANDARD, set: core, availability: deferred_source}
+OV-F-110: {column: iv_skew_25d, family: 1, importance: STANDARD, set: core, availability: immediate}
+OV-F-111: {column: iv_skew_25d_change_1d, family: 1, importance: STANDARD, set: extension, availability: deferred}
+
+# Family 2 — Realised-Implied Spread (2 Core + 2 Extension)
+OV-F-201: {column: iv_rv_spread_5d, family: 2, importance: CRITICAL, set: core, availability: immediate}
+OV-F-202: {column: iv_rv_spread_10d, family: 2, importance: STANDARD, set: core, availability: immediate}
+OV-F-203: {column: iv_rv_spread_20d, family: 2, importance: STANDARD, set: extension, availability: deferred}
+OV-F-204: {column: iv_rv_spread_conv_3d, family: 2, importance: STANDARD, set: extension, availability: deferred}
+
+# Family 3 — Event Context (5 Core + 2 Extension per §5.2.7)
+OV-F-301: {column: days_to_nearest_event, family: 3, importance: CRITICAL, set: core, availability: deferred_source}
+OV-F-302: {column: event_active_flag, family: 3, importance: CRITICAL, set: core, availability: deferred_source}
+OV-F-303: {column: event_category_active, family: 3, importance: STANDARD, set: core, availability: deferred_source}
+OV-F-304: {column: hist_iv_response_mean, family: 3, importance: STANDARD, set: core, availability: deferred_source}
+OV-F-305: {column: hist_iv_response_std, family: 3, importance: STANDARD, set: extension, availability: deferred}
+OV-F-306: {column: event_window_position_enc, family: 3, importance: STANDARD, set: core, availability: deferred_source}
+OV-F-307: {column: pre_event_iv_change, family: 3, importance: STANDARD, set: extension, availability: deferred}
+
+# Family 4 — Options Microstructure (5 Core)
+OV-F-401: {column: pcr_volume, family: 4, importance: STANDARD, set: core, availability: immediate}
+OV-F-402: {column: pcr_oi, family: 4, importance: STANDARD, set: core, availability: immediate}
+OV-F-403: {column: oi_change_net_1d, family: 4, importance: STANDARD, set: core, availability: immediate}
+OV-F-404: {column: volume_zscore_session, family: 4, importance: STANDARD, set: core, availability: immediate}
+OV-F-405: {column: fno_ban_heavyweight_flag, family: 4, importance: STANDARD, set: core, availability: deferred_source}
+
+# Family 5 — Temporal (5 Core)
+OV-F-501: {column: day_of_week, family: 5, importance: STANDARD, set: core, availability: immediate}
+OV-F-502: {column: time_of_day_bucket, family: 5, importance: STANDARD, set: core, availability: immediate}
+OV-F-503: {column: days_to_current_expiry, family: 5, importance: CRITICAL, set: core, availability: immediate}
+OV-F-504: {column: is_monthly_expiry_week, family: 5, importance: STANDARD, set: core, availability: immediate}
+OV-F-505: {column: days_to_next_holiday, family: 5, importance: STANDARD, set: core, availability: immediate}
+
+# Summary: 32 features (26 Core + 6 Extension), 8 CRITICAL

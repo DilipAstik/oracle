@@ -1,0 +1,4532 @@
+{
+  "NIFTY": {
+    "expansion": {
+      "horizon_medium": {
+        "aggregate": {
+          "status": "OK",
+          "n_valid_folds": 6,
+          "xgboost": {
+            "brier_mean": 0.13071110366889233,
+            "brier_std": 0.05284248224223809,
+            "ece_mean": 0.011540980452963985,
+            "auroc_mean": 0.5721948920865534,
+            "train_val_gap_mean": 0.03288659964229493
+          },
+          "logistic": {
+            "brier_mean": 0.1215163259115352,
+            "brier_std": 0.046273998378205984
+          },
+          "shap_stability_kendall_tau": {
+            "mean_tau": 0.16063492063492063,
+            "std_tau": 0.5205946558181468,
+            "n_pairs": 15
+          },
+          "baseline_comparison": {
+            "best_baseline": "naive",
+            "best_baseline_brier": 0.14064487577284693,
+            "xgb_improvement": 0.009933772103954602,
+            "beats_baseline_0.02": "False"
+          }
+        },
+        "folds": [
+          {
+            "fold": 1,
+            "n_train": 149,
+            "n_val": 60,
+            "n_positive_train": 31,
+            "n_positive_val": 15,
+            "xgboost": {
+              "best_params": {
+                "subsample": 0.9,
+                "reg_lambda": 5.0,
+                "reg_alpha": 0.01,
+                "n_estimators": 50,
+                "min_child_weight": 20,
+                "max_depth": 3,
+                "learning_rate": 0.15,
+                "colsample_bytree": 1.0
+              },
+              "train_brier": 0.1647674018018077,
+              "val_raw": {
+                "brier": 0.189240975189277,
+                "ece": 0.04172499477863312,
+                "auroc": 0.5,
+                "logloss": 0.5673798652232349
+              },
+              "val_calibrated": {
+                "brier": 0.189240975189277,
+                "ece": 0.04172499477863312,
+                "auroc": 0.5,
+                "logloss": 0.5673798652232349
+              },
+              "bootstrap_ci_95": [
+                0.12117180974092924,
+                0.2573101406376247
+              ],
+              "train_val_gap": -0.024473573387469277,
+              "shap_importance": {
+                "day_of_week": 0.0,
+                "days_to_current_expiry": 0.0,
+                "is_monthly_expiry_week": 0.0,
+                "days_to_next_holiday": 0.0,
+                "riv_level": 0.0,
+                "riv_change_1d": 0.0,
+                "riv_change_3d": 0.0,
+                "iv_term_structure_slope": 0.0,
+                "iv_skew_25d": 0.0,
+                "iv_rv_spread_5d": 0.0,
+                "iv_rv_spread_10d": 0.0,
+                "pcr_volume": 0.0,
+                "pcr_oi": 0.0,
+                "oi_change_net_1d": 0.0,
+                "volume_zscore_session": 0.0
+              }
+            },
+            "logistic": {
+              "best_params": {
+                "logistic__C": 0.01
+              },
+              "train_brier": 0.15890240976954503,
+              "val_raw": {
+                "brier": 0.1888133760225915,
+                "ece": 0.05866915208357721,
+                "auroc": 0.5614814814814816,
+                "logloss": 0.565717328633144
+              },
+              "val_calibrated": {
+                "brier": 0.17336810555555554,
+                "ece": 5.000000000000143e-05,
+                "auroc": 0.6622222222222223,
+                "logloss": 0.5158388289093048
+              },
+              "bootstrap_ci_95": [
+                0.12445964729745373,
+                0.22305252579282403
+              ],
+              "feature_importance": {
+                "day_of_week": 0.02785610414898612,
+                "days_to_current_expiry": 0.013432812513730465,
+                "is_monthly_expiry_week": 0.0014013351347029336,
+                "days_to_next_holiday": 0.07725057552301248,
+                "riv_level": 0.018803375289812223,
+                "riv_change_1d": 0.02234802421813624,
+                "riv_change_3d": 0.009224009073164542,
+                "iv_term_structure_slope": 0.0023554463699335376,
+                "iv_skew_25d": 0.023211165285567607,
+                "iv_rv_spread_5d": 0.06745138100540961,
+                "iv_rv_spread_10d": 0.061624828041147876,
+                "pcr_volume": 0.024220073383656365,
+                "pcr_oi": 0.014663669968807615,
+                "oi_change_net_1d": 0.06146113689606274,
+                "volume_zscore_session": 0.039844321549378885
+              }
+            }
+          },
+          {
+            "fold": 2,
+            "n_train": 187,
+            "n_val": 65,
+            "n_positive_train": 42,
+            "n_positive_val": 14,
+            "xgboost": {
+              "best_params": {
+                "subsample": 0.9,
+                "reg_lambda": 5.0,
+                "reg_alpha": 0.01,
+                "n_estimators": 50,
+                "min_child_weight": 20,
+                "max_depth": 3,
+                "learning_rate": 0.15,
+                "colsample_bytree": 1.0
+              },
+              "train_brier": 0.1741544236763491,
+              "val_raw": {
+                "brier": 0.16907149927406426,
+                "ece": 0.00879866091104653,
+                "auroc": 0.5,
+                "logloss": 0.5212287144113054
+              },
+              "val_calibrated": {
+                "brier": 0.16907149927406426,
+                "ece": 0.00879866091104653,
+                "auroc": 0.5,
+                "logloss": 0.5212287144113054
+              },
+              "bootstrap_ci_95": [
+                0.11815148874403261,
+                0.22847817822576785
+              ],
+              "train_val_gap": 0.005082924402284833,
+              "shap_importance": {
+                "day_of_week": 0.0,
+                "days_to_current_expiry": 0.0,
+                "is_monthly_expiry_week": 0.0,
+                "days_to_next_holiday": 0.0,
+                "riv_level": 0.0,
+                "riv_change_1d": 0.0,
+                "riv_change_3d": 0.0,
+                "iv_term_structure_slope": 0.0,
+                "iv_skew_25d": 0.0,
+                "iv_rv_spread_5d": 0.0,
+                "iv_rv_spread_10d": 0.0,
+                "pcr_volume": 0.0,
+                "pcr_oi": 0.0,
+                "oi_change_net_1d": 0.0,
+                "volume_zscore_session": 0.0
+              }
+            },
+            "logistic": {
+              "best_params": {
+                "logistic__C": 0.01
+              },
+              "train_brier": 0.16701762431315872,
+              "val_raw": {
+                "brier": 0.17101762250201666,
+                "ece": 0.02589370565909539,
+                "auroc": 0.5168067226890756,
+                "logloss": 0.5255247226672032
+              },
+              "val_calibrated": {
+                "brier": 0.16309044912280704,
+                "ece": 3.076923076923592e-05,
+                "auroc": 0.5987394957983193,
+                "logloss": 0.4982939361926339
+              },
+              "bootstrap_ci_95": [
+                0.11346831009849187,
+                0.22296782985084168
+              ],
+              "feature_importance": {
+                "day_of_week": 0.0012062438541612765,
+                "days_to_current_expiry": 0.01979293276865591,
+                "is_monthly_expiry_week": 0.03506232513028908,
+                "days_to_next_holiday": 0.08346406910051632,
+                "riv_level": 0.009356449510838777,
+                "riv_change_1d": 0.012974612270573345,
+                "riv_change_3d": 0.048646957007390614,
+                "iv_term_structure_slope": 0.005572571089552429,
+                "iv_skew_25d": 0.045757589471774676,
+                "iv_rv_spread_5d": 0.0567148693457123,
+                "iv_rv_spread_10d": 0.05463170069365891,
+                "pcr_volume": 0.00970664468503664,
+                "pcr_oi": 0.03637498633536687,
+                "oi_change_net_1d": 0.08706163878701284,
+                "volume_zscore_session": 0.06213994904316239
+              }
+            }
+          },
+          {
+            "fold": 3,
+            "n_train": 230,
+            "n_val": 65,
+            "n_positive_train": 53,
+            "n_positive_val": 16,
+            "xgboost": {
+              "best_params": {
+                "subsample": 0.9,
+                "reg_lambda": 5.0,
+                "reg_alpha": 0.01,
+                "n_estimators": 50,
+                "min_child_weight": 20,
+                "max_depth": 3,
+                "learning_rate": 0.15,
+                "colsample_bytree": 1.0
+              },
+              "train_brier": 0.1773404266312799,
+              "val_raw": {
+                "brier": 0.18589098069668128,
+                "ece": 0.018134236106505774,
+                "auroc": 0.5,
+                "logloss": 0.55898751892057
+              },
+              "val_calibrated": {
+                "brier": 0.18589098069668128,
+                "ece": 0.018134236106505774,
+                "auroc": 0.5,
+                "logloss": 0.55898751892057
+              },
+              "bootstrap_ci_95": [
+                0.12731058901456999,
+                0.24447137237879257
+              ],
+              "train_val_gap": -0.008550554065401367,
+              "shap_importance": {
+                "day_of_week": 0.0,
+                "days_to_current_expiry": 0.0,
+                "is_monthly_expiry_week": 0.0,
+                "days_to_next_holiday": 0.0,
+                "riv_level": 0.0,
+                "riv_change_1d": 0.0,
+                "riv_change_3d": 0.0,
+                "iv_term_structure_slope": 0.0,
+                "iv_skew_25d": 0.0,
+                "iv_rv_spread_5d": 0.0,
+                "iv_rv_spread_10d": 0.0,
+                "pcr_volume": 0.0,
+                "pcr_oi": 0.0,
+                "oi_change_net_1d": 0.0,
+                "volume_zscore_session": 0.0
+              }
+            },
+            "logistic": {
+              "best_params": {
+                "logistic__C": 0.01
+              },
+              "train_brier": 0.17059318283310898,
+              "val_raw": {
+                "brier": 0.18309573788619604,
+                "ece": 0.016732095177394192,
+                "auroc": 0.5459183673469388,
+                "logloss": 0.5519434026431612
+              },
+              "val_calibrated": {
+                "brier": 0.16469494112695815,
+                "ece": 6.153846153854567e-05,
+                "auroc": 0.6594387755102041,
+                "logloss": 0.5002824227982317
+              },
+              "bootstrap_ci_95": [
+                0.11458497207470082,
+                0.21393881461596734
+              ],
+              "feature_importance": {
+                "day_of_week": 0.007249422957546215,
+                "days_to_current_expiry": 0.017540421259581617,
+                "is_monthly_expiry_week": 0.02999864457352997,
+                "days_to_next_holiday": 0.07954860874466639,
+                "riv_level": 0.003905746560750542,
+                "riv_change_1d": 0.023613215149797258,
+                "riv_change_3d": 0.05794186810236388,
+                "iv_term_structure_slope": 0.03062771122352123,
+                "iv_skew_25d": 0.04085123251916156,
+                "iv_rv_spread_5d": 0.07957932199161932,
+                "iv_rv_spread_10d": 0.07394427031945094,
+                "pcr_volume": 0.024977922539207595,
+                "pcr_oi": 0.0439506213487609,
+                "oi_change_net_1d": 0.06969533317728815,
+                "volume_zscore_session": 0.0572020192411254
+              }
+            }
+          },
+          {
+            "fold": 4,
+            "n_train": 274,
+            "n_val": 65,
+            "n_positive_train": 63,
+            "n_positive_val": 8,
+            "xgboost": {
+              "best_params": {
+                "subsample": 0.9,
+                "reg_lambda": 5.0,
+                "reg_alpha": 0.01,
+                "n_estimators": 50,
+                "min_child_weight": 20,
+                "max_depth": 3,
+                "learning_rate": 0.15,
+                "colsample_bytree": 1.0
+              },
+              "train_brier": 0.16001834304567428,
+              "val_raw": {
+                "brier": 0.14111420204328937,
+                "ece": 0.12225452959537506,
+                "auroc": 0.43640350877192985,
+                "logloss": 0.4564765768382453
+              },
+              "val_calibrated": {
+                "brier": 0.10711988765653246,
+                "ece": 3.077427570062865e-05,
+                "auroc": 0.5548245614035088,
+                "logloss": 0.3673960901570736
+              },
+              "bootstrap_ci_95": [
+                0.0501105191887295,
+                0.17476742858973576
+              ],
+              "train_val_gap": 0.05289845538914181,
+              "shap_importance": {
+                "day_of_week": 0.0,
+                "days_to_current_expiry": 0.0,
+                "is_monthly_expiry_week": 0.0,
+                "days_to_next_holiday": 2.0081934928894043,
+                "riv_level": 2.9594740867614746,
+                "riv_change_1d": 2.6182827949523926,
+                "riv_change_3d": 0.0,
+                "iv_term_structure_slope": 1.0070346593856812,
+                "iv_skew_25d": 0.8221375346183777,
+                "iv_rv_spread_5d": 1.7702562808990479,
+                "iv_rv_spread_10d": 1.575602650642395,
+                "pcr_volume": 2.108166217803955,
+                "pcr_oi": 1.9075247049331665,
+                "oi_change_net_1d": 3.268449544906616,
+                "volume_zscore_session": 1.7655129432678223
+              }
+            },
+            "logistic": {
+              "best_params": {
+                "logistic__C": 0.01
+              },
+              "train_brier": 0.1710246716299415,
+              "val_raw": {
+                "brier": 0.118047245440041,
+                "ece": 0.1274963815366216,
+                "auroc": 0.6228070175438597,
+                "logloss": 0.4059865191552626
+              },
+              "val_calibrated": {
+                "brier": 0.09115057768897773,
+                "ece": 6.153846153849042e-05,
+                "auroc": 0.7149122807017544,
+                "logloss": 0.31506039215441206
+              },
+              "bootstrap_ci_95": [
+                0.046589791595222974,
+                0.1536519087200606
+              ],
+              "feature_importance": {
+                "day_of_week": 0.0027364922377345726,
+                "days_to_current_expiry": 0.008067727703198233,
+                "is_monthly_expiry_week": 0.009628447147940991,
+                "days_to_next_holiday": 0.07195174351787179,
+                "riv_level": 0.02257233739640045,
+                "riv_change_1d": 0.03515508589798028,
+                "riv_change_3d": 0.04545227899985011,
+                "iv_term_structure_slope": 0.024214097144870182,
+                "iv_skew_25d": 0.027045052033564585,
+                "iv_rv_spread_5d": 0.06882706539912399,
+                "iv_rv_spread_10d": 0.05754023145975826,
+                "pcr_volume": 0.027221763411151432,
+                "pcr_oi": 0.02671764438686327,
+                "oi_change_net_1d": 0.11234102739150671,
+                "volume_zscore_session": 0.06692542958241114
+              }
+            }
+          },
+          {
+            "fold": 5,
+            "n_train": 296,
+            "n_val": 66,
+            "n_positive_train": 66,
+            "n_positive_val": 5,
+            "xgboost": {
+              "best_params": {
+                "subsample": 0.9,
+                "reg_lambda": 5.0,
+                "reg_alpha": 0.01,
+                "n_estimators": 50,
+                "min_child_weight": 20,
+                "max_depth": 3,
+                "learning_rate": 0.15,
+                "colsample_bytree": 1.0
+              },
+              "train_brier": 0.15455930627299647,
+              "val_raw": {
+                "brier": 0.12750769977597393,
+                "ece": 0.22349714668411197,
+                "auroc": 0.6295081967213114,
+                "logloss": 0.42628115074046546
+              },
+              "val_calibrated": {
+                "brier": 0.06549184980527363,
+                "ece": 0.00033333470381683187,
+                "auroc": 0.7573770491803279,
+                "logloss": 0.2283849056971898
+              },
+              "bootstrap_ci_95": [
+                0.022171439845180822,
+                0.12034990230509081
+              ],
+              "train_val_gap": 0.08906745646772284,
+              "shap_importance": {
+                "day_of_week": 0.0,
+                "days_to_current_expiry": 0.0,
+                "is_monthly_expiry_week": 0.0,
+                "days_to_next_holiday": 0.0,
+                "riv_level": 3.150723695755005,
+                "riv_change_1d": 2.4355857372283936,
+                "riv_change_3d": 0.0,
+                "iv_term_structure_slope": 1.0107207298278809,
+                "iv_skew_25d": 0.765153706073761,
+                "iv_rv_spread_5d": 3.1065990924835205,
+                "iv_rv_spread_10d": 1.906726360321045,
+                "pcr_volume": 2.2545249462127686,
+                "pcr_oi": 2.4313671588897705,
+                "oi_change_net_1d": 2.768472671508789,
+                "volume_zscore_session": 2.213233232498169
+              }
+            },
+            "logistic": {
+              "best_params": {
+                "logistic__C": 0.01
+              },
+              "train_brier": 0.1663317350877001,
+              "val_raw": {
+                "brier": 0.09702903333536533,
+                "ece": 0.15958100411724496,
+                "auroc": 0.4622950819672131,
+                "logloss": 0.36061779465600585
+              },
+              "val_calibrated": {
+                "brier": 0.0677361853832442,
+                "ece": 0.0,
+                "auroc": 0.6704918032786885,
+                "logloss": 0.25103262831456996
+              },
+              "bootstrap_ci_95": [
+                0.019832297892419,
+                0.12637114003355351
+              ],
+              "feature_importance": {
+                "day_of_week": 0.01472554539870049,
+                "days_to_current_expiry": 0.00859545476488652,
+                "is_monthly_expiry_week": 0.023632461291371493,
+                "days_to_next_holiday": 0.06054284980891575,
+                "riv_level": 0.042308175900771995,
+                "riv_change_1d": 0.038485267125447455,
+                "riv_change_3d": 0.05646196516897666,
+                "iv_term_structure_slope": 0.029739013957219992,
+                "iv_skew_25d": 0.030335843872792666,
+                "iv_rv_spread_5d": 0.09361066559843453,
+                "iv_rv_spread_10d": 0.08702711398039058,
+                "pcr_volume": 0.02514583602230603,
+                "pcr_oi": 0.03353427835720952,
+                "oi_change_net_1d": 0.10751376868001122,
+                "volume_zscore_session": 0.06107526095687619
+              }
+            }
+          },
+          {
+            "fold": 6,
+            "n_train": 326,
+            "n_val": 67,
+            "n_positive_train": 70,
+            "n_positive_val": 5,
+            "xgboost": {
+              "best_params": {
+                "subsample": 0.9,
+                "reg_lambda": 5.0,
+                "reg_alpha": 0.01,
+                "n_estimators": 50,
+                "min_child_weight": 20,
+                "max_depth": 3,
+                "learning_rate": 0.15,
+                "colsample_bytree": 1.0
+              },
+              "train_brier": 0.15074631843901598,
+              "val_raw": {
+                "brier": 0.1227121683718826,
+                "ece": 0.21646860219649414,
+                "auroc": 0.4887096774193549,
+                "logloss": 0.4195294764714444
+              },
+              "val_calibrated": {
+                "brier": 0.06745142939152526,
+                "ece": 0.0002238819420810334,
+                "auroc": 0.6209677419354839,
+                "logloss": 0.24590379148369987
+              },
+              "bootstrap_ci_95": [
+                0.01908956530889005,
+                0.11636175818731573
+              ],
+              "train_val_gap": 0.08329488904749072,
+              "shap_importance": {
+                "day_of_week": 2.3329172134399414,
+                "days_to_current_expiry": 0.0,
+                "is_monthly_expiry_week": 0.0,
+                "days_to_next_holiday": 1.5784484148025513,
+                "riv_level": 3.567936658859253,
+                "riv_change_1d": 3.043518543243408,
+                "riv_change_3d": 3.373817205429077,
+                "iv_term_structure_slope": 1.3550779819488525,
+                "iv_skew_25d": 1.2348451614379883,
+                "iv_rv_spread_5d": 2.405834674835205,
+                "iv_rv_spread_10d": 0.0,
+                "pcr_volume": 2.324458122253418,
+                "pcr_oi": 2.417283296585083,
+                "oi_change_net_1d": 2.597991704940796,
+                "volume_zscore_session": 2.389493703842163
+              }
+            },
+            "logistic": {
+              "best_params": {
+                "logistic__C": 0.01
+              },
+              "train_brier": 0.16295284594833162,
+              "val_raw": {
+                "brier": 0.09466843965987898,
+                "ece": 0.14885842339605326,
+                "auroc": 0.3161290322580645,
+                "logloss": 0.3554747835412143
+              },
+              "val_calibrated": {
+                "brier": 0.06905769659166855,
+                "ece": 1.3877787807814457e-17,
+                "auroc": 0.5,
+                "logloss": 0.2654460308093814
+              },
+              "bootstrap_ci_95": [
+                0.018266874582312322,
+                0.11984851860102473
+              ],
+              "feature_importance": {
+                "day_of_week": 0.038165219951246235,
+                "days_to_current_expiry": 0.009942691211352288,
+                "is_monthly_expiry_week": 0.030910645480498686,
+                "days_to_next_holiday": 0.07455325479690689,
+                "riv_level": 0.03232921262149243,
+                "riv_change_1d": 0.05750500495335822,
+                "riv_change_3d": 0.048638787002990305,
+                "iv_term_structure_slope": 0.026749331914631837,
+                "iv_skew_25d": 0.033751148564746834,
+                "iv_rv_spread_5d": 0.08355532145140296,
+                "iv_rv_spread_10d": 0.053220187317931385,
+                "pcr_volume": 0.04071487259921941,
+                "pcr_oi": 0.021863794050095132,
+                "oi_change_net_1d": 0.09234854870860186,
+                "volume_zscore_session": 0.06833736623409749
+              }
+            }
+          }
+        ]
+      },
+      "horizon_short": {
+        "aggregate": {
+          "status": "OK",
+          "n_valid_folds": 6,
+          "xgboost": {
+            "brier_mean": 0.12860758251250393,
+            "brier_std": 0.039863337423812616,
+            "ece_mean": 0.017456712072699748,
+            "auroc_mean": 0.6162791962545252,
+            "train_val_gap_mean": 0.03596986825435851
+          },
+          "logistic": {
+            "brier_mean": 0.10491260454134994,
+            "brier_std": 0.02170956301244613
+          },
+          "shap_stability_kendall_tau": {
+            "mean_tau": 0.5073015873015873,
+            "std_tau": 0.34872347567127304,
+            "n_pairs": 15
+          },
+          "baseline_comparison": {
+            "best_baseline": "naive",
+            "best_baseline_brier": 0.1397996230342509,
+            "xgb_improvement": 0.011192040521746965,
+            "beats_baseline_0.02": "False"
+          }
+        },
+        "folds": [
+          {
+            "fold": 1,
+            "n_train": 151,
+            "n_val": 54,
+            "n_positive_train": 36,
+            "n_positive_val": 13,
+            "xgboost": {
+              "best_params": {
+                "subsample": 0.9,
+                "reg_lambda": 5.0,
+                "reg_alpha": 0.01,
+                "n_estimators": 50,
+                "min_child_weight": 20,
+                "max_depth": 3,
+                "learning_rate": 0.15,
+                "colsample_bytree": 1.0
+              },
+              "train_brier": 0.1815743935781711,
+              "val_raw": {
+                "brier": 0.18278487032534887,
+                "ece": 0.00048356696411414046,
+                "auroc": 0.5,
+                "logloss": 0.5519329019523952
+              },
+              "val_calibrated": {
+                "brier": 0.18278487032534887,
+                "ece": 0.00048356696411414046,
+                "auroc": 0.5,
+                "logloss": 0.5519329019523952
+              },
+              "bootstrap_ci_95": [
+                0.12506424227571045,
+                0.25012560304992715
+              ],
+              "train_val_gap": -0.00121047674717778,
+              "shap_importance": {
+                "day_of_week": 0.0,
+                "days_to_current_expiry": 0.0,
+                "is_monthly_expiry_week": 0.0,
+                "days_to_next_holiday": 0.0,
+                "riv_level": 0.0,
+                "riv_change_1d": 0.0,
+                "riv_change_3d": 0.0,
+                "iv_term_structure_slope": 0.0,
+                "iv_skew_25d": 0.0,
+                "iv_rv_spread_5d": 0.0,
+                "iv_rv_spread_10d": 0.0,
+                "pcr_volume": 0.0,
+                "pcr_oi": 0.0,
+                "oi_change_net_1d": 0.0,
+                "volume_zscore_session": 0.0
+              }
+            },
+            "logistic": {
+              "best_params": {
+                "logistic__C": 0.01
+              },
+              "train_brier": 0.158191634438301,
+              "val_raw": {
+                "brier": 0.16932292410629213,
+                "ece": 0.08111797619807645,
+                "auroc": 0.724202626641651,
+                "logloss": 0.5140922281512936
+              },
+              "val_calibrated": {
+                "brier": 0.1479720405643739,
+                "ece": 0.00025925925925929434,
+                "auroc": 0.7636022514071295,
+                "logloss": 0.4342912101088952
+              },
+              "bootstrap_ci_95": [
+                0.10345726950323343,
+                0.1995593571418073
+              ],
+              "feature_importance": {
+                "day_of_week": 0.13287155970239078,
+                "days_to_current_expiry": 0.003881899367209688,
+                "is_monthly_expiry_week": 0.02170433679622618,
+                "days_to_next_holiday": 0.0667240653423425,
+                "riv_level": 0.02213922438824626,
+                "riv_change_1d": 0.019615145393573098,
+                "riv_change_3d": 0.047630568092366814,
+                "iv_term_structure_slope": 0.03484872153891637,
+                "iv_skew_25d": 0.046133163332935156,
+                "iv_rv_spread_5d": 0.039683334367404975,
+                "iv_rv_spread_10d": 0.0920124911579907,
+                "pcr_volume": 0.01189180610276787,
+                "pcr_oi": 0.052372030395475146,
+                "oi_change_net_1d": 0.156752505259623,
+                "volume_zscore_session": 0.09812366350210609
+              }
+            }
+          },
+          {
+            "fold": 2,
+            "n_train": 185,
+            "n_val": 57,
+            "n_positive_train": 45,
+            "n_positive_val": 12,
+            "xgboost": {
+              "best_params": {
+                "subsample": 0.9,
+                "reg_lambda": 5.0,
+                "reg_alpha": 0.01,
+                "n_estimators": 50,
+                "min_child_weight": 20,
+                "max_depth": 3,
+                "learning_rate": 0.15,
+                "colsample_bytree": 1.0
+              },
+              "train_brier": 0.18409277821750858,
+              "val_raw": {
+                "brier": 0.16756047550926945,
+                "ece": 0.03681697108243643,
+                "auroc": 0.5,
+                "logloss": 0.5184264757049499
+              },
+              "val_calibrated": {
+                "brier": 0.16756047550926945,
+                "ece": 0.03681697108243643,
+                "auroc": 0.5,
+                "logloss": 0.5184264757049499
+              },
+              "bootstrap_ci_95": [
+                0.11436958853493473,
+                0.22961651031265992
+              ],
+              "train_val_gap": 0.016532302708239133,
+              "shap_importance": {
+                "day_of_week": 0.0,
+                "days_to_current_expiry": 0.0,
+                "is_monthly_expiry_week": 0.0,
+                "days_to_next_holiday": 0.0,
+                "riv_level": 0.0,
+                "riv_change_1d": 0.0,
+                "riv_change_3d": 0.0,
+                "iv_term_structure_slope": 0.0,
+                "iv_skew_25d": 0.0,
+                "iv_rv_spread_5d": 0.0,
+                "iv_rv_spread_10d": 0.0,
+                "pcr_volume": 0.0,
+                "pcr_oi": 0.0,
+                "oi_change_net_1d": 0.0,
+                "volume_zscore_session": 0.0
+              }
+            },
+            "logistic": {
+              "best_params": {
+                "logistic__C": 0.01
+              },
+              "train_brier": 0.16050895084441477,
+              "val_raw": {
+                "brier": 0.14757883752522122,
+                "ece": 0.14224598561390858,
+                "auroc": 0.8240740740740741,
+                "logloss": 0.4640101368765406
+              },
+              "val_calibrated": {
+                "brier": 0.10998005734810996,
+                "ece": 0.0003684210526316394,
+                "auroc": 0.8722222222222222,
+                "logloss": 0.3324069135000698
+              },
+              "bootstrap_ci_95": [
+                0.06695942729925036,
+                0.16649426538876735
+              ],
+              "feature_importance": {
+                "day_of_week": 0.1262403454713885,
+                "days_to_current_expiry": 0.005131186262642343,
+                "is_monthly_expiry_week": 0.02408029009103765,
+                "days_to_next_holiday": 0.08942427854838338,
+                "riv_level": 0.03141477381555753,
+                "riv_change_1d": 0.016793391891345568,
+                "riv_change_3d": 0.06809785791375512,
+                "iv_term_structure_slope": 0.03547737535218008,
+                "iv_skew_25d": 0.05088176219183651,
+                "iv_rv_spread_5d": 0.04209058627588509,
+                "iv_rv_spread_10d": 0.0973704572049769,
+                "pcr_volume": 0.005606144357356111,
+                "pcr_oi": 0.033191421392940824,
+                "oi_change_net_1d": 0.17325494677532827,
+                "volume_zscore_session": 0.11106350089207653
+              }
+            }
+          },
+          {
+            "fold": 3,
+            "n_train": 223,
+            "n_val": 56,
+            "n_positive_train": 54,
+            "n_positive_val": 10,
+            "xgboost": {
+              "best_params": {
+                "subsample": 0.9,
+                "reg_lambda": 5.0,
+                "reg_alpha": 0.01,
+                "n_estimators": 50,
+                "min_child_weight": 20,
+                "max_depth": 3,
+                "learning_rate": 0.15,
+                "colsample_bytree": 1.0
+              },
+              "train_brier": 0.1835234279301614,
+              "val_raw": {
+                "brier": 0.15111176360196663,
+                "ece": 0.0665438962834222,
+                "auroc": 0.5,
+                "logloss": 0.48205389239932306
+              },
+              "val_calibrated": {
+                "brier": 0.15111176360196663,
+                "ece": 0.0665438962834222,
+                "auroc": 0.5,
+                "logloss": 0.48205389239932306
+              },
+              "bootstrap_ci_95": [
+                0.10559664304033281,
+                0.20572990827592713
+              ],
+              "train_val_gap": 0.032411664328194784,
+              "shap_importance": {
+                "day_of_week": 0.0,
+                "days_to_current_expiry": 0.0,
+                "is_monthly_expiry_week": 0.0,
+                "days_to_next_holiday": 0.0,
+                "riv_level": 0.0,
+                "riv_change_1d": 0.0,
+                "riv_change_3d": 0.0,
+                "iv_term_structure_slope": 0.0,
+                "iv_skew_25d": 0.0,
+                "iv_rv_spread_5d": 0.0,
+                "iv_rv_spread_10d": 0.0,
+                "pcr_volume": 0.0,
+                "pcr_oi": 0.0,
+                "oi_change_net_1d": 0.0,
+                "volume_zscore_session": 0.0
+              }
+            },
+            "logistic": {
+              "best_params": {
+                "logistic__C": 0.01
+              },
+              "train_brier": 0.1596504968674922,
+              "val_raw": {
+                "brier": 0.13558092709924008,
+                "ece": 0.10286395502509335,
+                "auroc": 0.6782608695652174,
+                "logloss": 0.44116463919235616
+              },
+              "val_calibrated": {
+                "brier": 0.10680282823129253,
+                "ece": 0.00010714285714287104,
+                "auroc": 0.7782608695652173,
+                "logloss": 0.3517718067044137
+              },
+              "bootstrap_ci_95": [
+                0.05855128802437643,
+                0.16592590188694528
+              ],
+              "feature_importance": {
+                "day_of_week": 0.15151619339615033,
+                "days_to_current_expiry": 0.0251353889518715,
+                "is_monthly_expiry_week": 0.04009662344367204,
+                "days_to_next_holiday": 0.07482894388266265,
+                "riv_level": 0.018187890612888984,
+                "riv_change_1d": 0.002372782149733243,
+                "riv_change_3d": 0.05553818735495432,
+                "iv_term_structure_slope": 0.048234500879277074,
+                "iv_skew_25d": 0.04499613574678124,
+                "iv_rv_spread_5d": 0.04378594870027136,
+                "iv_rv_spread_10d": 0.10697299845318164,
+                "pcr_volume": 0.011774915005867565,
+                "pcr_oi": 0.03283808944760949,
+                "oi_change_net_1d": 0.18593462522615473,
+                "volume_zscore_session": 0.13299823986180984
+              }
+            }
+          },
+          {
+            "fold": 4,
+            "n_train": 260,
+            "n_val": 60,
+            "n_positive_train": 61,
+            "n_positive_val": 6,
+            "xgboost": {
+              "best_params": {
+                "subsample": 0.9,
+                "reg_lambda": 5.0,
+                "reg_alpha": 0.01,
+                "n_estimators": 50,
+                "min_child_weight": 20,
+                "max_depth": 3,
+                "learning_rate": 0.15,
+                "colsample_bytree": 1.0
+              },
+              "train_brier": 0.15580021597588692,
+              "val_raw": {
+                "brier": 0.13504949349922354,
+                "ece": 0.19984833771983782,
+                "auroc": 0.6342592592592593,
+                "logloss": 0.4361503698736897
+              },
+              "val_calibrated": {
+                "brier": 0.08496273934840261,
+                "ece": 0.0003333335975185074,
+                "auroc": 0.6944444444444444,
+                "logloss": 0.281992281233345
+              },
+              "bootstrap_ci_95": [
+                0.0369838359211442,
+                0.14322565837738632
+              ],
+              "train_val_gap": 0.07083747662748431,
+              "shap_importance": {
+                "day_of_week": 8.828086853027344,
+                "days_to_current_expiry": 0.0,
+                "is_monthly_expiry_week": 0.0,
+                "days_to_next_holiday": 0.0,
+                "riv_level": 0.0,
+                "riv_change_1d": 0.0,
+                "riv_change_3d": 0.0,
+                "iv_term_structure_slope": 0.0,
+                "iv_skew_25d": 0.0,
+                "iv_rv_spread_5d": 0.0,
+                "iv_rv_spread_10d": 0.0,
+                "pcr_volume": 0.0,
+                "pcr_oi": 0.0,
+                "oi_change_net_1d": 7.783384323120117,
+                "volume_zscore_session": 0.0
+              }
+            },
+            "logistic": {
+              "best_params": {
+                "logistic__C": 0.01
+              },
+              "train_brier": 0.1523444894987784,
+              "val_raw": {
+                "brier": 0.11274704627302944,
+                "ece": 0.1281303593320122,
+                "auroc": 0.4876543209876543,
+                "logloss": 0.3906374749996374
+              },
+              "val_calibrated": {
+                "brier": 0.08741791315789472,
+                "ece": 0.00015000000000000012,
+                "auroc": 0.6435185185185185,
+                "logloss": 0.3042036939883828
+              },
+              "bootstrap_ci_95": [
+                0.03660311403335642,
+                0.14897213802508946
+              ],
+              "feature_importance": {
+                "day_of_week": 0.1845515998202831,
+                "days_to_current_expiry": 0.03869612656611732,
+                "is_monthly_expiry_week": 0.05381165721106031,
+                "days_to_next_holiday": 0.061651742568045044,
+                "riv_level": 0.035104178693533244,
+                "riv_change_1d": 0.003218235692741115,
+                "riv_change_3d": 0.042600631532424243,
+                "iv_term_structure_slope": 0.05254587101907975,
+                "iv_skew_25d": 0.04661738240841064,
+                "iv_rv_spread_5d": 0.03861103767272183,
+                "iv_rv_spread_10d": 0.10534086147454957,
+                "pcr_volume": 0.01568109637747005,
+                "pcr_oi": 0.03715279346618129,
+                "oi_change_net_1d": 0.22549023704262633,
+                "volume_zscore_session": 0.13679501299967894
+              }
+            }
+          },
+          {
+            "fold": 5,
+            "n_train": 279,
+            "n_val": 64,
+            "n_positive_train": 64,
+            "n_positive_val": 7,
+            "xgboost": {
+              "best_params": {
+                "subsample": 0.9,
+                "reg_lambda": 5.0,
+                "reg_alpha": 0.01,
+                "n_estimators": 50,
+                "min_child_weight": 20,
+                "max_depth": 3,
+                "learning_rate": 0.15,
+                "colsample_bytree": 1.0
+              },
+              "train_brier": 0.14764263253898247,
+              "val_raw": {
+                "brier": 0.12027885971387964,
+                "ece": 0.17518290504813194,
+                "auroc": 0.7406015037593986,
+                "logloss": 0.39196226255465916
+              },
+              "val_calibrated": {
+                "brier": 0.0863099773337051,
+                "ece": 0.00045312641850615235,
+                "auroc": 0.7744360902255639,
+                "logloss": 0.27026570539974165
+              },
+              "bootstrap_ci_95": [
+                0.04088414574142209,
+                0.13511232249016292
+              ],
+              "train_val_gap": 0.061332655205277364,
+              "shap_importance": {
+                "day_of_week": 6.126582145690918,
+                "days_to_current_expiry": 0.0,
+                "is_monthly_expiry_week": 0.0,
+                "days_to_next_holiday": 0.0,
+                "riv_level": 0.0,
+                "riv_change_1d": 0.0,
+                "riv_change_3d": 1.601564645767212,
+                "iv_term_structure_slope": 3.199561834335327,
+                "iv_skew_25d": 0.0,
+                "iv_rv_spread_5d": 1.8282734155654907,
+                "iv_rv_spread_10d": 1.3610310554504395,
+                "pcr_volume": 0.0,
+                "pcr_oi": 0.0,
+                "oi_change_net_1d": 7.774681568145752,
+                "volume_zscore_session": 0.0
+              }
+            },
+            "logistic": {
+              "best_params": {
+                "logistic__C": 0.01
+              },
+              "train_brier": 0.15369280569797145,
+              "val_raw": {
+                "brier": 0.11165035113257826,
+                "ece": 0.14461790562266846,
+                "auroc": 0.7644110275689224,
+                "logloss": 0.384557426824148
+              },
+              "val_calibrated": {
+                "brier": 0.08125053125000002,
+                "ece": 0.0005312500000000243,
+                "auroc": 0.8283208020050126,
+                "logloss": 0.2488600156277493
+              },
+              "bootstrap_ci_95": [
+                0.0409712359375,
+                0.13051412578125
+              ],
+              "feature_importance": {
+                "day_of_week": 0.16979404234668968,
+                "days_to_current_expiry": 0.045612019044870784,
+                "is_monthly_expiry_week": 0.055786509713523474,
+                "days_to_next_holiday": 0.046961376323829775,
+                "riv_level": 0.05389947137194011,
+                "riv_change_1d": 0.007913974389826559,
+                "riv_change_3d": 0.03684374986111514,
+                "iv_term_structure_slope": 0.057049690290928164,
+                "iv_skew_25d": 0.040205404736081925,
+                "iv_rv_spread_5d": 0.06715196296731088,
+                "iv_rv_spread_10d": 0.11010274839586975,
+                "pcr_volume": 0.01465608129683037,
+                "pcr_oi": 0.024242200840666948,
+                "oi_change_net_1d": 0.21320042515857363,
+                "volume_zscore_session": 0.11043485105808845
+              }
+            }
+          },
+          {
+            "fold": 6,
+            "n_train": 307,
+            "n_val": 64,
+            "n_positive_train": 67,
+            "n_positive_val": 8,
+            "xgboost": {
+              "best_params": {
+                "subsample": 0.9,
+                "reg_lambda": 5.0,
+                "reg_alpha": 0.01,
+                "n_estimators": 50,
+                "min_child_weight": 20,
+                "max_depth": 3,
+                "learning_rate": 0.15,
+                "colsample_bytree": 1.0
+              },
+              "train_brier": 0.13483125636046409,
+              "val_raw": {
+                "brier": 0.12931294704606766,
+                "ece": 0.12219705351162702,
+                "auroc": 0.65625,
+                "logloss": 0.41921570860907575
+              },
+              "val_calibrated": {
+                "brier": 0.09891566895633086,
+                "ece": 0.00010937809020105695,
+                "auroc": 0.7287946428571428,
+                "logloss": 0.32728460656296343
+              },
+              "bootstrap_ci_95": [
+                0.04830208289911622,
+                0.1557946553844173
+              ],
+              "train_val_gap": 0.035915587404133226,
+              "shap_importance": {
+                "day_of_week": 16.013023376464844,
+                "days_to_current_expiry": 0.0,
+                "is_monthly_expiry_week": 0.0,
+                "days_to_next_holiday": 1.0676852464675903,
+                "riv_level": 0.7567785978317261,
+                "riv_change_1d": 0.0,
+                "riv_change_3d": 2.012265205383301,
+                "iv_term_structure_slope": 2.4325506687164307,
+                "iv_skew_25d": 1.7468845844268799,
+                "iv_rv_spread_5d": 0.9967498779296875,
+                "iv_rv_spread_10d": 1.2113932371139526,
+                "pcr_volume": 0.0,
+                "pcr_oi": 0.0,
+                "oi_change_net_1d": 6.31270694732666,
+                "volume_zscore_session": 1.429445505142212
+              }
+            },
+            "logistic": {
+              "best_params": {
+                "logistic__C": 0.01
+              },
+              "train_brier": 0.1490295397900953,
+              "val_raw": {
+                "brier": 0.11948509442931136,
+                "ece": 0.12346516998644452,
+                "auroc": 0.6741071428571428,
+                "logloss": 0.4044772490896983
+              },
+              "val_calibrated": {
+                "brier": 0.09605225669642857,
+                "ece": 0.0003593750000000062,
+                "auroc": 0.765625,
+                "logloss": 0.3041555770967652
+              },
+              "bootstrap_ci_95": [
+                0.04949016739576691,
+                0.14819495597048382
+              ],
+              "feature_importance": {
+                "day_of_week": 0.17765432701343728,
+                "days_to_current_expiry": 0.03756901841365764,
+                "is_monthly_expiry_week": 0.07674962893708114,
+                "days_to_next_holiday": 0.06572073795036254,
+                "riv_level": 0.0530461715161502,
+                "riv_change_1d": 0.009827894094220122,
+                "riv_change_3d": 0.04663844764332771,
+                "iv_term_structure_slope": 0.0579703321565159,
+                "iv_skew_25d": 0.05428084209059709,
+                "iv_rv_spread_5d": 0.06614780523908867,
+                "iv_rv_spread_10d": 0.08774444392081394,
+                "pcr_volume": 0.030322218292490884,
+                "pcr_oi": 0.03270773980823091,
+                "oi_change_net_1d": 0.20725790865427712,
+                "volume_zscore_session": 0.12210842328219526
+              }
+            }
+          }
+        ]
+      }
+    },
+    "compression": {
+      "horizon_medium": {
+        "aggregate": {
+          "status": "OK",
+          "n_valid_folds": 6,
+          "xgboost": {
+            "brier_mean": 0.1720101747794506,
+            "brier_std": 0.014779374672941752,
+            "ece_mean": 0.012798268897268381,
+            "auroc_mean": 0.6013414085440939,
+            "train_val_gap_mean": -0.0199651546076452
+          },
+          "logistic": {
+            "brier_mean": 0.16016913147164483,
+            "brier_std": 0.02324218602086196
+          },
+          "shap_stability_kendall_tau": {
+            "mean_tau": 0.18857142857142856,
+            "std_tau": 0.4788396152921054,
+            "n_pairs": 15
+          },
+          "baseline_comparison": {
+            "best_baseline": "riv_momentum",
+            "best_baseline_brier": 0.1904944321612897,
+            "xgb_improvement": 0.018484257381839092,
+            "beats_baseline_0.02": "False"
+          }
+        },
+        "folds": [
+          {
+            "fold": 1,
+            "n_train": 149,
+            "n_val": 60,
+            "n_positive_train": 29,
+            "n_positive_val": 12,
+            "xgboost": {
+              "best_params": {
+                "subsample": 0.9,
+                "reg_lambda": 5.0,
+                "reg_alpha": 0.01,
+                "n_estimators": 50,
+                "min_child_weight": 20,
+                "max_depth": 3,
+                "learning_rate": 0.15,
+                "colsample_bytree": 1.0
+              },
+              "train_brier": 0.15675050260430248,
+              "val_raw": {
+                "brier": 0.16003927856677364,
+                "ece": 0.006267261505126964,
+                "auroc": 0.5,
+                "logloss": 0.5005271424574487
+              },
+              "val_calibrated": {
+                "brier": 0.16003927856677364,
+                "ece": 0.006267261505126964,
+                "auroc": 0.5,
+                "logloss": 0.5005271424574487
+              },
+              "bootstrap_ci_95": [
+                0.09878582626574825,
+                0.2315016395846366
+              ],
+              "train_val_gap": -0.003288775962471152,
+              "shap_importance": {
+                "day_of_week": 0.0,
+                "days_to_current_expiry": 0.0,
+                "is_monthly_expiry_week": 0.0,
+                "days_to_next_holiday": 0.0,
+                "riv_level": 0.0,
+                "riv_change_1d": 0.0,
+                "riv_change_3d": 0.0,
+                "iv_term_structure_slope": 0.0,
+                "iv_skew_25d": 0.0,
+                "iv_rv_spread_5d": 0.0,
+                "iv_rv_spread_10d": 0.0,
+                "pcr_volume": 0.0,
+                "pcr_oi": 0.0,
+                "oi_change_net_1d": 0.0,
+                "volume_zscore_session": 0.0
+              }
+            },
+            "logistic": {
+              "best_params": {
+                "logistic__C": 0.01
+              },
+              "train_brier": 0.14708970157291146,
+              "val_raw": {
+                "brier": 0.15393056131422733,
+                "ece": 0.03924980030827038,
+                "auroc": 0.7083333333333334,
+                "logloss": 0.48061087317987133
+              },
+              "val_calibrated": {
+                "brier": 0.12540501190476191,
+                "ece": 0.00025000000000000656,
+                "auroc": 0.78125,
+                "logloss": 0.38615448504684863
+              },
+              "bootstrap_ci_95": [
+                0.0762686299489796,
+                0.1840771008333333
+              ],
+              "feature_importance": {
+                "day_of_week": 0.031074848058663864,
+                "days_to_current_expiry": 0.036279459116599626,
+                "is_monthly_expiry_week": 0.007481225051008073,
+                "days_to_next_holiday": 0.00752087273998512,
+                "riv_level": 0.10082186102507196,
+                "riv_change_1d": 0.05361436836688091,
+                "riv_change_3d": 0.01405803780587808,
+                "iv_term_structure_slope": 0.04772371181831181,
+                "iv_skew_25d": 0.03251830928461318,
+                "iv_rv_spread_5d": 0.042329138886114906,
+                "iv_rv_spread_10d": 0.02957148460113363,
+                "pcr_volume": 0.021308222114294183,
+                "pcr_oi": 0.011063717309789826,
+                "oi_change_net_1d": 0.11846902356551127,
+                "volume_zscore_session": 0.02316153192558905
+              }
+            }
+          },
+          {
+            "fold": 2,
+            "n_train": 187,
+            "n_val": 65,
+            "n_positive_train": 36,
+            "n_positive_val": 16,
+            "xgboost": {
+              "best_params": {
+                "subsample": 0.9,
+                "reg_lambda": 5.0,
+                "reg_alpha": 0.01,
+                "n_estimators": 50,
+                "min_child_weight": 20,
+                "max_depth": 3,
+                "learning_rate": 0.15,
+                "colsample_bytree": 1.0
+              },
+              "train_brier": 0.15545251835306942,
+              "val_raw": {
+                "brier": 0.18851929344475146,
+                "ece": 0.05437980569325962,
+                "auroc": 0.5,
+                "logloss": 0.5670117890496256
+              },
+              "val_calibrated": {
+                "brier": 0.18851929344475146,
+                "ece": 0.05437980569325962,
+                "auroc": 0.5,
+                "logloss": 0.5670117890496256
+              },
+              "bootstrap_ci_95": [
+                0.12213216369780087,
+                0.25490642319170204
+              ],
+              "train_val_gap": -0.033066775091682044,
+              "shap_importance": {
+                "day_of_week": 0.0,
+                "days_to_current_expiry": 0.0,
+                "is_monthly_expiry_week": 0.0,
+                "days_to_next_holiday": 0.0,
+                "riv_level": 0.0,
+                "riv_change_1d": 0.0,
+                "riv_change_3d": 0.0,
+                "iv_term_structure_slope": 0.0,
+                "iv_skew_25d": 0.0,
+                "iv_rv_spread_5d": 0.0,
+                "iv_rv_spread_10d": 0.0,
+                "pcr_volume": 0.0,
+                "pcr_oi": 0.0,
+                "oi_change_net_1d": 0.0,
+                "volume_zscore_session": 0.0
+              }
+            },
+            "logistic": {
+              "best_params": {
+                "logistic__C": 0.01
+              },
+              "train_brier": 0.14569636107134595,
+              "val_raw": {
+                "brier": 0.1793012978046434,
+                "ece": 0.06082596223734694,
+                "auroc": 0.7053571428571429,
+                "logloss": 0.5378549325441792
+              },
+              "val_calibrated": {
+                "brier": 0.14337493598014886,
+                "ece": 0.0002461538461538612,
+                "auroc": 0.7704081632653061,
+                "logloss": 0.4277499415335695
+              },
+              "bootstrap_ci_95": [
+                0.09729938679220365,
+                0.19087779823221002
+              ],
+              "feature_importance": {
+                "day_of_week": 0.06969777299060746,
+                "days_to_current_expiry": 0.017183275541390153,
+                "is_monthly_expiry_week": 0.0024489060034962092,
+                "days_to_next_holiday": 9.390084632008024e-05,
+                "riv_level": 0.1161655635281751,
+                "riv_change_1d": 0.056466190777939795,
+                "riv_change_3d": 0.005336873480095852,
+                "iv_term_structure_slope": 0.051186993231079905,
+                "iv_skew_25d": 0.05673181418032411,
+                "iv_rv_spread_5d": 0.04555976765216992,
+                "iv_rv_spread_10d": 0.03167581830890337,
+                "pcr_volume": 0.0034475437075232864,
+                "pcr_oi": 0.022510872893405958,
+                "oi_change_net_1d": 0.12355950057292159,
+                "volume_zscore_session": 0.0164169892087598
+              }
+            }
+          },
+          {
+            "fold": 3,
+            "n_train": 230,
+            "n_val": 65,
+            "n_positive_train": 46,
+            "n_positive_val": 14,
+            "xgboost": {
+              "best_params": {
+                "subsample": 0.9,
+                "reg_lambda": 5.0,
+                "reg_alpha": 0.01,
+                "n_estimators": 50,
+                "min_child_weight": 20,
+                "max_depth": 3,
+                "learning_rate": 0.15,
+                "colsample_bytree": 1.0
+              },
+              "train_brier": 0.1600004865554618,
+              "val_raw": {
+                "brier": 0.16925271841012068,
+                "ece": 0.01608215066102836,
+                "auroc": 0.5,
+                "logloss": 0.5217987108802281
+              },
+              "val_calibrated": {
+                "brier": 0.16925271841012068,
+                "ece": 0.01608215066102836,
+                "auroc": 0.5,
+                "logloss": 0.5217987108802281
+              },
+              "bootstrap_ci_95": [
+                0.11373932728216754,
+                0.22476610953807385
+              ],
+              "train_val_gap": -0.009252231854658871,
+              "shap_importance": {
+                "day_of_week": 0.0,
+                "days_to_current_expiry": 0.0,
+                "is_monthly_expiry_week": 0.0,
+                "days_to_next_holiday": 0.0,
+                "riv_level": 0.0,
+                "riv_change_1d": 0.0,
+                "riv_change_3d": 0.0,
+                "iv_term_structure_slope": 0.0,
+                "iv_skew_25d": 0.0,
+                "iv_rv_spread_5d": 0.0,
+                "iv_rv_spread_10d": 0.0,
+                "pcr_volume": 0.0,
+                "pcr_oi": 0.0,
+                "oi_change_net_1d": 0.0,
+                "volume_zscore_session": 0.0
+              }
+            },
+            "logistic": {
+              "best_params": {
+                "logistic__C": 0.01
+              },
+              "train_brier": 0.1471273267246661,
+              "val_raw": {
+                "brier": 0.16237148443307234,
+                "ece": 0.04996905577562886,
+                "auroc": 0.6582633053221288,
+                "logloss": 0.5011854083906904
+              },
+              "val_calibrated": {
+                "brier": 0.14715367683688857,
+                "ece": 4.615384615385132e-05,
+                "auroc": 0.7149859943977591,
+                "logloss": 0.4548225103756673
+              },
+              "bootstrap_ci_95": [
+                0.09738713724047086,
+                0.19688422618317006
+              ],
+              "feature_importance": {
+                "day_of_week": 0.06621952814280464,
+                "days_to_current_expiry": 0.027838106754346947,
+                "is_monthly_expiry_week": 0.02549275754814893,
+                "days_to_next_holiday": 0.0003295412911932103,
+                "riv_level": 0.15397352828685404,
+                "riv_change_1d": 0.046121522073518086,
+                "riv_change_3d": 0.013147729034736223,
+                "iv_term_structure_slope": 0.10767997073573107,
+                "iv_skew_25d": 0.05721754432743464,
+                "iv_rv_spread_5d": 0.021368903326511427,
+                "iv_rv_spread_10d": 0.017126082121030877,
+                "pcr_volume": 0.027451110838104854,
+                "pcr_oi": 0.015537773034762522,
+                "oi_change_net_1d": 0.13099775477943523,
+                "volume_zscore_session": 0.028984226829148793
+              }
+            }
+          },
+          {
+            "fold": 4,
+            "n_train": 274,
+            "n_val": 65,
+            "n_positive_train": 57,
+            "n_positive_val": 20,
+            "xgboost": {
+              "best_params": {
+                "subsample": 0.9,
+                "reg_lambda": 5.0,
+                "reg_alpha": 0.01,
+                "n_estimators": 50,
+                "min_child_weight": 20,
+                "max_depth": 3,
+                "learning_rate": 0.15,
+                "colsample_bytree": 1.0
+              },
+              "train_brier": 0.14724244341105225,
+              "val_raw": {
+                "brier": 0.2157612021960759,
+                "ece": 0.11101479438635019,
+                "auroc": 0.6016666666666667,
+                "logloss": 0.6372096710517576
+              },
+              "val_calibrated": {
+                "brier": 0.1905634278002699,
+                "ece": 2.9802322379155133e-09,
+                "auroc": 0.6661111111111111,
+                "logloss": 0.5668145343104994
+              },
+              "bootstrap_ci_95": [
+                0.14501406338239378,
+                0.24358620131222516
+              ],
+              "train_val_gap": -0.043320984389217665,
+              "shap_importance": {
+                "day_of_week": 0.0,
+                "days_to_current_expiry": 0.0,
+                "is_monthly_expiry_week": 0.0,
+                "days_to_next_holiday": 0.0,
+                "riv_level": 3.0800557136535645,
+                "riv_change_1d": 3.250561475753784,
+                "riv_change_3d": 0.0,
+                "iv_term_structure_slope": 5.388502597808838,
+                "iv_skew_25d": 0.0,
+                "iv_rv_spread_5d": 0.0,
+                "iv_rv_spread_10d": 0.0,
+                "pcr_volume": 0.0,
+                "pcr_oi": 0.0,
+                "oi_change_net_1d": 7.994712829589844,
+                "volume_zscore_session": 2.8191139698028564
+              }
+            },
+            "logistic": {
+              "best_params": {
+                "logistic__C": 0.01
+              },
+              "train_brier": 0.1489289100208961,
+              "val_raw": {
+                "brier": 0.22172081069738936,
+                "ece": 0.13028492827739607,
+                "auroc": 0.62,
+                "logloss": 0.6431679882083934
+              },
+              "val_calibrated": {
+                "brier": 0.19283179898562977,
+                "ece": 1.5384615384649546e-05,
+                "auroc": 0.6816666666666666,
+                "logloss": 0.5651000801062745
+              },
+              "bootstrap_ci_95": [
+                0.1532808315543459,
+                0.23764707128474
+              ],
+              "feature_importance": {
+                "day_of_week": 0.09166130373801197,
+                "days_to_current_expiry": 0.042708490760230894,
+                "is_monthly_expiry_week": 0.017474788550880454,
+                "days_to_next_holiday": 0.03470131139479858,
+                "riv_level": 0.17296813299049704,
+                "riv_change_1d": 0.058855298439313704,
+                "riv_change_3d": 0.024971839127084297,
+                "iv_term_structure_slope": 0.11452916142444916,
+                "iv_skew_25d": 0.05412670027049129,
+                "iv_rv_spread_5d": 0.007926978720533577,
+                "iv_rv_spread_10d": 0.00994288522877837,
+                "pcr_volume": 0.03531661890297037,
+                "pcr_oi": 0.00042975982457454096,
+                "oi_change_net_1d": 0.15620153200160086,
+                "volume_zscore_session": 0.059905513951149555
+              }
+            }
+          },
+          {
+            "fold": 5,
+            "n_train": 296,
+            "n_val": 66,
+            "n_positive_train": 61,
+            "n_positive_val": 20,
+            "xgboost": {
+              "best_params": {
+                "subsample": 0.9,
+                "reg_lambda": 5.0,
+                "reg_alpha": 0.01,
+                "n_estimators": 50,
+                "min_child_weight": 20,
+                "max_depth": 3,
+                "learning_rate": 0.15,
+                "colsample_bytree": 1.0
+              },
+              "train_brier": 0.1451633580899856,
+              "val_raw": {
+                "brier": 0.20141778062734986,
+                "ece": 0.17748908342962913,
+                "auroc": 0.7065217391304347,
+                "logloss": 0.5975505484015879
+              },
+              "val_calibrated": {
+                "brier": 0.14887853624402228,
+                "ece": 4.5461832390474735e-05,
+                "auroc": 0.7907608695652174,
+                "logloss": 0.46076208804435925
+              },
+              "bootstrap_ci_95": [
+                0.10348313193241773,
+                0.2054369879920045
+              ],
+              "train_val_gap": -0.0037151781540366857,
+              "shap_importance": {
+                "day_of_week": 0.0,
+                "days_to_current_expiry": 1.4734960794448853,
+                "is_monthly_expiry_week": 0.0,
+                "days_to_next_holiday": 1.7320246696472168,
+                "riv_level": 2.6393582820892334,
+                "riv_change_1d": 1.2985618114471436,
+                "riv_change_3d": 0.0,
+                "iv_term_structure_slope": 4.056850910186768,
+                "iv_skew_25d": 0.6231251955032349,
+                "iv_rv_spread_5d": 1.6370095014572144,
+                "iv_rv_spread_10d": 1.033492088317871,
+                "pcr_volume": 1.2298492193222046,
+                "pcr_oi": 1.4679255485534668,
+                "oi_change_net_1d": 6.357085704803467,
+                "volume_zscore_session": 1.969641089439392
+              }
+            },
+            "logistic": {
+              "best_params": {
+                "logistic__C": 0.01
+              },
+              "train_brier": 0.15015460052491847,
+              "val_raw": {
+                "brier": 0.2166270994302336,
+                "ece": 0.1199760779885515,
+                "auroc": 0.6891304347826087,
+                "logloss": 0.6282347537529323
+              },
+              "val_calibrated": {
+                "brier": 0.174512987012987,
+                "ece": 2.985827073802504e-17,
+                "auroc": 0.7434782608695653,
+                "logloss": 0.5215417770503192
+              },
+              "bootstrap_ci_95": [
+                0.13033023098759708,
+                0.22479087162011263
+              ],
+              "feature_importance": {
+                "day_of_week": 0.1082147176090987,
+                "days_to_current_expiry": 0.03645463435758495,
+                "is_monthly_expiry_week": 0.014042350733998938,
+                "days_to_next_holiday": 0.03853045782053105,
+                "riv_level": 0.16815388659154423,
+                "riv_change_1d": 0.0577917449116398,
+                "riv_change_3d": 0.04722571581504712,
+                "iv_term_structure_slope": 0.11049151057306093,
+                "iv_skew_25d": 0.03784912680601933,
+                "iv_rv_spread_5d": 0.02917091996339821,
+                "iv_rv_spread_10d": 0.008862788109858986,
+                "pcr_volume": 0.03205712925916492,
+                "pcr_oi": 0.0003721298278954715,
+                "oi_change_net_1d": 0.13132472880851395,
+                "volume_zscore_session": 0.04757688435532723
+              }
+            }
+          },
+          {
+            "fold": 6,
+            "n_train": 326,
+            "n_val": 67,
+            "n_positive_train": 71,
+            "n_positive_val": 17,
+            "xgboost": {
+              "best_params": {
+                "subsample": 0.9,
+                "reg_lambda": 5.0,
+                "reg_alpha": 0.01,
+                "n_estimators": 50,
+                "min_child_weight": 20,
+                "max_depth": 3,
+                "learning_rate": 0.15,
+                "colsample_bytree": 1.0
+              },
+              "train_brier": 0.147660812016961,
+              "val_raw": {
+                "brier": 0.19626091882446692,
+                "ece": 0.14097624783640478,
+                "auroc": 0.5311764705882352,
+                "logloss": 0.6035582572854851
+              },
+              "val_calibrated": {
+                "brier": 0.17480779421076578,
+                "ece": 1.4930711572628412e-05,
+                "auroc": 0.6511764705882352,
+                "logloss": 0.5288473447770626
+              },
+              "bootstrap_ci_95": [
+                0.12104141709526804,
+                0.22554334065136672
+              ],
+              "train_val_gap": -0.02714698219380479,
+              "shap_importance": {
+                "day_of_week": 5.685043811798096,
+                "days_to_current_expiry": 0.0,
+                "is_monthly_expiry_week": 0.0,
+                "days_to_next_holiday": 0.0,
+                "riv_level": 1.2543931007385254,
+                "riv_change_1d": 1.6667652130126953,
+                "riv_change_3d": 0.0,
+                "iv_term_structure_slope": 4.736683368682861,
+                "iv_skew_25d": 1.727486252784729,
+                "iv_rv_spread_5d": 1.8903474807739258,
+                "iv_rv_spread_10d": 1.798143982887268,
+                "pcr_volume": 2.021038293838501,
+                "pcr_oi": 1.469140648841858,
+                "oi_change_net_1d": 5.632457733154297,
+                "volume_zscore_session": 2.788635730743408
+              }
+            },
+            "logistic": {
+              "best_params": {
+                "logistic__C": 0.01
+              },
+              "train_brier": 0.15767155295610183,
+              "val_raw": {
+                "brier": 0.1921175787133318,
+                "ece": 0.07369759331109665,
+                "auroc": 0.6094117647058823,
+                "logloss": 0.5746238788828852
+              },
+              "val_calibrated": {
+                "brier": 0.17773637810945273,
+                "ece": 5.970149253733829e-05,
+                "auroc": 0.6547058823529411,
+                "logloss": 0.5286774931510871
+              },
+              "bootstrap_ci_95": [
+                0.12651583499170813,
+                0.2283099677446103
+              ],
+              "feature_importance": {
+                "day_of_week": 0.1312182059325479,
+                "days_to_current_expiry": 0.038273293216516666,
+                "is_monthly_expiry_week": 0.05035998743441538,
+                "days_to_next_holiday": 0.01681798598590867,
+                "riv_level": 0.14529481817815915,
+                "riv_change_1d": 0.06363164394454815,
+                "riv_change_3d": 0.03311875470394658,
+                "iv_term_structure_slope": 0.11135165948291413,
+                "iv_skew_25d": 0.031881819981174925,
+                "iv_rv_spread_5d": 0.02592415220139811,
+                "iv_rv_spread_10d": 0.023754965319015966,
+                "pcr_volume": 0.037413190454952144,
+                "pcr_oi": 0.012723289757501727,
+                "oi_change_net_1d": 0.11973676126510595,
+                "volume_zscore_session": 0.043684698844591335
+              }
+            }
+          }
+        ]
+      },
+      "horizon_short": {
+        "aggregate": {
+          "status": "OK",
+          "n_valid_folds": 6,
+          "xgboost": {
+            "brier_mean": 0.1783146725924627,
+            "brier_std": 0.019482159828899736,
+            "ece_mean": 0.012231409734615189,
+            "auroc_mean": 0.5503170569940756,
+            "train_val_gap_mean": -0.015535813223441894
+          },
+          "logistic": {
+            "brier_mean": 0.15217143976554,
+            "brier_std": 0.025050369493956923
+          },
+          "shap_stability_kendall_tau": {
+            "mean_tau": 0.16825396825396824,
+            "std_tau": 0.5080476068974991,
+            "n_pairs": 15
+          },
+          "baseline_comparison": {
+            "best_baseline": "garch",
+            "best_baseline_brier": 0.18380895193684257,
+            "xgb_improvement": 0.0054942793443798765,
+            "beats_baseline_0.02": "False"
+          }
+        },
+        "folds": [
+          {
+            "fold": 1,
+            "n_train": 151,
+            "n_val": 54,
+            "n_positive_train": 34,
+            "n_positive_val": 13,
+            "xgboost": {
+              "best_params": {
+                "subsample": 0.9,
+                "reg_lambda": 5.0,
+                "reg_alpha": 0.01,
+                "n_estimators": 50,
+                "min_child_weight": 20,
+                "max_depth": 3,
+                "learning_rate": 0.15,
+                "colsample_bytree": 1.0
+              },
+              "train_brier": 0.17446624889517873,
+              "val_raw": {
+                "brier": 0.1830419402937893,
+                "ece": 0.016040692174876164,
+                "auroc": 0.5,
+                "logloss": 0.5526587480342643
+              },
+              "val_calibrated": {
+                "brier": 0.1830419402937893,
+                "ece": 0.016040692174876164,
+                "auroc": 0.5,
+                "logloss": 0.5526587480342643
+              },
+              "bootstrap_ci_95": [
+                0.12186417330842587,
+                0.2444746146415915
+              ],
+              "train_val_gap": -0.008575691398610585,
+              "shap_importance": {
+                "day_of_week": 0.0,
+                "days_to_current_expiry": 0.0,
+                "is_monthly_expiry_week": 0.0,
+                "days_to_next_holiday": 0.0,
+                "riv_level": 0.0,
+                "riv_change_1d": 0.0,
+                "riv_change_3d": 0.0,
+                "iv_term_structure_slope": 0.0,
+                "iv_skew_25d": 0.0,
+                "iv_rv_spread_5d": 0.0,
+                "iv_rv_spread_10d": 0.0,
+                "pcr_volume": 0.0,
+                "pcr_oi": 0.0,
+                "oi_change_net_1d": 0.0,
+                "volume_zscore_session": 0.0
+              }
+            },
+            "logistic": {
+              "best_params": {
+                "logistic__C": 0.01
+              },
+              "train_brier": 0.14816463560935278,
+              "val_raw": {
+                "brier": 0.17410438651459742,
+                "ece": 0.041792912639658106,
+                "auroc": 0.6866791744840526,
+                "logloss": 0.5271887121160641
+              },
+              "val_calibrated": {
+                "brier": 0.14968570463195027,
+                "ece": 0.00014814814814817745,
+                "auroc": 0.7532833020637899,
+                "logloss": 0.4542297605504683
+              },
+              "bootstrap_ci_95": [
+                0.09651357965393795,
+                0.20656007043627536
+              ],
+              "feature_importance": {
+                "day_of_week": 0.10460494987837488,
+                "days_to_current_expiry": 0.03977721630453434,
+                "is_monthly_expiry_week": 0.019124586529773648,
+                "days_to_next_holiday": 0.010897504458146379,
+                "riv_level": 0.0695750433215751,
+                "riv_change_1d": 0.0810917954525056,
+                "riv_change_3d": 0.07898924566279203,
+                "iv_term_structure_slope": 0.0849140839313312,
+                "iv_skew_25d": 0.03547650965070769,
+                "iv_rv_spread_5d": 0.11793693364748228,
+                "iv_rv_spread_10d": 0.1010219582858249,
+                "pcr_volume": 0.007023357377548218,
+                "pcr_oi": 0.041268458703123935,
+                "oi_change_net_1d": 0.11390806207524976,
+                "volume_zscore_session": 0.0760685231264495
+              }
+            }
+          },
+          {
+            "fold": 2,
+            "n_train": 185,
+            "n_val": 57,
+            "n_positive_train": 44,
+            "n_positive_val": 11,
+            "xgboost": {
+              "best_params": {
+                "subsample": 0.9,
+                "reg_lambda": 5.0,
+                "reg_alpha": 0.01,
+                "n_estimators": 50,
+                "min_child_weight": 20,
+                "max_depth": 3,
+                "learning_rate": 0.15,
+                "colsample_bytree": 1.0
+              },
+              "train_brier": 0.18128721814572948,
+              "val_raw": {
+                "brier": 0.1574071775566542,
+                "ece": 0.0408282964898829,
+                "auroc": 0.5,
+                "logloss": 0.495380269251025
+              },
+              "val_calibrated": {
+                "brier": 0.1574071775566542,
+                "ece": 0.0408282964898829,
+                "auroc": 0.5,
+                "logloss": 0.495380269251025
+              },
+              "bootstrap_ci_95": [
+                0.10136733600512447,
+                0.21344701910818392
+              ],
+              "train_val_gap": 0.02388004058907528,
+              "shap_importance": {
+                "day_of_week": 0.0,
+                "days_to_current_expiry": 0.0,
+                "is_monthly_expiry_week": 0.0,
+                "days_to_next_holiday": 0.0,
+                "riv_level": 0.0,
+                "riv_change_1d": 0.0,
+                "riv_change_3d": 0.0,
+                "iv_term_structure_slope": 0.0,
+                "iv_skew_25d": 0.0,
+                "iv_rv_spread_5d": 0.0,
+                "iv_rv_spread_10d": 0.0,
+                "pcr_volume": 0.0,
+                "pcr_oi": 0.0,
+                "oi_change_net_1d": 0.0,
+                "volume_zscore_session": 0.0
+              }
+            },
+            "logistic": {
+              "best_params": {
+                "logistic__C": 0.01
+              },
+              "train_brier": 0.15300763485117833,
+              "val_raw": {
+                "brier": 0.1507236462455124,
+                "ece": 0.030865004751725524,
+                "auroc": 0.6383399209486166,
+                "logloss": 0.4760336750775844
+              },
+              "val_calibrated": {
+                "brier": 0.13336416153911348,
+                "ece": 0.00010526315789473685,
+                "auroc": 0.7322134387351779,
+                "logloss": 0.419268438449885
+              },
+              "bootstrap_ci_95": [
+                0.08111054015940003,
+                0.19008605131342754
+              ],
+              "feature_importance": {
+                "day_of_week": 0.09791554758439648,
+                "days_to_current_expiry": 0.06321585588375385,
+                "is_monthly_expiry_week": 0.0064169765097029045,
+                "days_to_next_holiday": 0.024366812705426368,
+                "riv_level": 0.06461866857345099,
+                "riv_change_1d": 0.1105301908586217,
+                "riv_change_3d": 0.08404532339777585,
+                "iv_term_structure_slope": 0.09647711802070914,
+                "iv_skew_25d": 0.04447126159580909,
+                "iv_rv_spread_5d": 0.12770722472266613,
+                "iv_rv_spread_10d": 0.10516166104303626,
+                "pcr_volume": 0.0023945286785296035,
+                "pcr_oi": 0.04471365089886795,
+                "oi_change_net_1d": 0.1371428609163322,
+                "volume_zscore_session": 0.08636163364774194
+              }
+            }
+          },
+          {
+            "fold": 3,
+            "n_train": 223,
+            "n_val": 56,
+            "n_positive_train": 49,
+            "n_positive_val": 13,
+            "xgboost": {
+              "best_params": {
+                "subsample": 0.9,
+                "reg_lambda": 5.0,
+                "reg_alpha": 0.01,
+                "n_estimators": 50,
+                "min_child_weight": 20,
+                "max_depth": 3,
+                "learning_rate": 0.15,
+                "colsample_bytree": 1.0
+              },
+              "train_brier": 0.17146449127750665,
+              "val_raw": {
+                "brier": 0.17851873963566614,
+                "ece": 0.016315287777355747,
+                "auroc": 0.5,
+                "logloss": 0.5426252519561788
+              },
+              "val_calibrated": {
+                "brier": 0.17851873963566614,
+                "ece": 0.016315287777355747,
+                "auroc": 0.5,
+                "logloss": 0.5426252519561788
+              },
+              "bootstrap_ci_95": [
+                0.11762464735684497,
+                0.23941283191448726
+              ],
+              "train_val_gap": -0.007054248358159487,
+              "shap_importance": {
+                "day_of_week": 0.0,
+                "days_to_current_expiry": 0.0,
+                "is_monthly_expiry_week": 0.0,
+                "days_to_next_holiday": 0.0,
+                "riv_level": 0.0,
+                "riv_change_1d": 0.0,
+                "riv_change_3d": 0.0,
+                "iv_term_structure_slope": 0.0,
+                "iv_skew_25d": 0.0,
+                "iv_rv_spread_5d": 0.0,
+                "iv_rv_spread_10d": 0.0,
+                "pcr_volume": 0.0,
+                "pcr_oi": 0.0,
+                "oi_change_net_1d": 0.0,
+                "volume_zscore_session": 0.0
+              }
+            },
+            "logistic": {
+              "best_params": {
+                "logistic__C": 0.01
+              },
+              "train_brier": 0.14849954461977102,
+              "val_raw": {
+                "brier": 0.1681308888760292,
+                "ece": 0.05814980895509023,
+                "auroc": 0.6744186046511628,
+                "logloss": 0.512747896127912
+              },
+              "val_calibrated": {
+                "brier": 0.14066838531111747,
+                "ece": 0.0001250000000000109,
+                "auroc": 0.7361359570661896,
+                "logloss": 0.4384581764925017
+              },
+              "bootstrap_ci_95": [
+                0.0855052423949659,
+                0.20367551359030717
+              ],
+              "feature_importance": {
+                "day_of_week": 0.09004996632243562,
+                "days_to_current_expiry": 0.0712876222389567,
+                "is_monthly_expiry_week": 0.020511900719676505,
+                "days_to_next_holiday": 0.008993224608828967,
+                "riv_level": 0.04330823573732397,
+                "riv_change_1d": 0.10659024307590853,
+                "riv_change_3d": 0.10204766532839311,
+                "iv_term_structure_slope": 0.11077529509520775,
+                "iv_skew_25d": 0.03659676209069966,
+                "iv_rv_spread_5d": 0.11670760959668017,
+                "iv_rv_spread_10d": 0.10189995205855328,
+                "pcr_volume": 0.01491691855768835,
+                "pcr_oi": 0.017843195404223855,
+                "oi_change_net_1d": 0.1528469682993182,
+                "volume_zscore_session": 0.0811716342388472
+              }
+            }
+          },
+          {
+            "fold": 4,
+            "n_train": 260,
+            "n_val": 60,
+            "n_positive_train": 58,
+            "n_positive_val": 14,
+            "xgboost": {
+              "best_params": {
+                "subsample": 0.9,
+                "reg_lambda": 5.0,
+                "reg_alpha": 0.01,
+                "n_estimators": 50,
+                "min_child_weight": 20,
+                "max_depth": 3,
+                "learning_rate": 0.15,
+                "colsample_bytree": 1.0
+              },
+              "train_brier": 0.1573424701405156,
+              "val_raw": {
+                "brier": 0.18197799071272858,
+                "ece": 0.0628900491942962,
+                "auroc": 0.5232919254658385,
+                "logloss": 0.5553320512988574
+              },
+              "val_calibrated": {
+                "brier": 0.16800001666666825,
+                "ece": 1.66691509851602e-05,
+                "auroc": 0.5822981366459626,
+                "logloss": 0.515988472167207
+              },
+              "bootstrap_ci_95": [
+                0.1065339251892578,
+                0.22742931271212943
+              ],
+              "train_val_gap": -0.01065754652615264,
+              "shap_importance": {
+                "day_of_week": 0.0,
+                "days_to_current_expiry": 0.0,
+                "is_monthly_expiry_week": 0.0,
+                "days_to_next_holiday": 0.0,
+                "riv_level": 0.0,
+                "riv_change_1d": 4.586967468261719,
+                "riv_change_3d": 3.5013248920440674,
+                "iv_term_structure_slope": 4.0305681228637695,
+                "iv_skew_25d": 0.0,
+                "iv_rv_spread_5d": 3.704427719116211,
+                "iv_rv_spread_10d": 0.014486433006823063,
+                "pcr_volume": 6.947325229644775,
+                "pcr_oi": 2.9515419006347656,
+                "oi_change_net_1d": 4.561540126800537,
+                "volume_zscore_session": 0.0
+              }
+            },
+            "logistic": {
+              "best_params": {
+                "logistic__C": 0.01
+              },
+              "train_brier": 0.14913941492867566,
+              "val_raw": {
+                "brier": 0.17107370879524725,
+                "ece": 0.059918868484317905,
+                "auroc": 0.6506211180124223,
+                "logloss": 0.5187023492088857
+              },
+              "val_calibrated": {
+                "brier": 0.15132293465608465,
+                "ece": 0.00018333333333334033,
+                "auroc": 0.7298136645962733,
+                "logloss": 0.4511976840627837
+              },
+              "bootstrap_ci_95": [
+                0.10088211680083145,
+                0.2002126548528176
+              ],
+              "feature_importance": {
+                "day_of_week": 0.08604973323648576,
+                "days_to_current_expiry": 0.08641306125674693,
+                "is_monthly_expiry_week": 0.027954593083187578,
+                "days_to_next_holiday": 0.001784957326314645,
+                "riv_level": 0.038882836776143195,
+                "riv_change_1d": 0.10658108830548862,
+                "riv_change_3d": 0.14313741223048562,
+                "iv_term_structure_slope": 0.11886738038799491,
+                "iv_skew_25d": 0.035882142875359395,
+                "iv_rv_spread_5d": 0.11104094633150183,
+                "iv_rv_spread_10d": 0.09368814055976202,
+                "pcr_volume": 0.05750405251666186,
+                "pcr_oi": 0.0013279390057133866,
+                "oi_change_net_1d": 0.17642061692480163,
+                "volume_zscore_session": 0.09643179980798491
+              }
+            }
+          },
+          {
+            "fold": 5,
+            "n_train": 279,
+            "n_val": 64,
+            "n_positive_train": 65,
+            "n_positive_val": 15,
+            "xgboost": {
+              "best_params": {
+                "subsample": 0.9,
+                "reg_lambda": 5.0,
+                "reg_alpha": 0.01,
+                "n_estimators": 50,
+                "min_child_weight": 20,
+                "max_depth": 3,
+                "learning_rate": 0.15,
+                "colsample_bytree": 1.0
+              },
+              "train_brier": 0.14953273552677876,
+              "val_raw": {
+                "brier": 0.18126955412360388,
+                "ece": 0.11122203787090257,
+                "auroc": 0.608843537414966,
+                "logloss": 0.5501142764464965
+              },
+              "val_calibrated": {
+                "brier": 0.1653275375594028,
+                "ece": 0.0001562521028972766,
+                "auroc": 0.6503401360544219,
+                "logloss": 0.4893102173794925
+              },
+              "bootstrap_ci_95": [
+                0.11746990831068202,
+                0.21303247601298317
+              ],
+              "train_val_gap": -0.01579480203262404,
+              "shap_importance": {
+                "day_of_week": 0.0,
+                "days_to_current_expiry": 0.0,
+                "is_monthly_expiry_week": 0.0,
+                "days_to_next_holiday": 0.0,
+                "riv_level": 1.649679183959961,
+                "riv_change_1d": 3.440925121307373,
+                "riv_change_3d": 3.515996217727661,
+                "iv_term_structure_slope": 3.0594663619995117,
+                "iv_skew_25d": 0.0,
+                "iv_rv_spread_5d": 3.9523236751556396,
+                "iv_rv_spread_10d": 0.0,
+                "pcr_volume": 1.4854035377502441,
+                "pcr_oi": 2.759503126144409,
+                "oi_change_net_1d": 3.949300527572632,
+                "volume_zscore_session": 1.84816575050354
+              }
+            },
+            "logistic": {
+              "best_params": {
+                "logistic__C": 0.01
+              },
+              "train_brier": 0.15401508032741865,
+              "val_raw": {
+                "brier": 0.168843368981173,
+                "ece": 0.11848682395789548,
+                "auroc": 0.7659863945578231,
+                "logloss": 0.5095896944144439
+              },
+              "val_calibrated": {
+                "brier": 0.1322091193181818,
+                "ece": 0.00031250000000000006,
+                "auroc": 0.8217687074829931,
+                "logloss": 0.3928095247342841
+              },
+              "bootstrap_ci_95": [
+                0.08921309183561468,
+                0.1794925490670196
+              ],
+              "feature_importance": {
+                "day_of_week": 0.07318945364865422,
+                "days_to_current_expiry": 0.10333975478426359,
+                "is_monthly_expiry_week": 0.02303285970993289,
+                "days_to_next_holiday": 0.02889007931115377,
+                "riv_level": 0.05325454882733943,
+                "riv_change_1d": 0.09290525964232764,
+                "riv_change_3d": 0.17114588436177777,
+                "iv_term_structure_slope": 0.11900180559700796,
+                "iv_skew_25d": 0.0490271384997844,
+                "iv_rv_spread_5d": 0.11944995749097936,
+                "iv_rv_spread_10d": 0.09230519810564879,
+                "pcr_volume": 0.03965795640754092,
+                "pcr_oi": 0.003907672019883926,
+                "oi_change_net_1d": 0.17148736633344164,
+                "volume_zscore_session": 0.07322690220112668
+              }
+            }
+          },
+          {
+            "fold": 6,
+            "n_train": 307,
+            "n_val": 64,
+            "n_positive_train": 69,
+            "n_positive_val": 22,
+            "xgboost": {
+              "best_params": {
+                "subsample": 0.9,
+                "reg_lambda": 5.0,
+                "reg_alpha": 0.01,
+                "n_estimators": 50,
+                "min_child_weight": 20,
+                "max_depth": 3,
+                "learning_rate": 0.15,
+                "colsample_bytree": 1.0
+              },
+              "train_brier": 0.1425799922284158,
+              "val_raw": {
+                "brier": 0.26563675070253034,
+                "ece": 0.1867185408482328,
+                "auroc": 0.45995670995670995,
+                "logloss": 0.7756369344329292
+              },
+              "val_calibrated": {
+                "brier": 0.2175926238425957,
+                "ece": 3.126071169388695e-05,
+                "auroc": 0.5692640692640693,
+                "logloss": 0.6200921534612736
+              },
+              "bootstrap_ci_95": [
+                0.18276135692474696,
+                0.2531035681958134
+              ],
+              "train_val_gap": -0.0750126316141799,
+              "shap_importance": {
+                "day_of_week": 0.0,
+                "days_to_current_expiry": 0.0,
+                "is_monthly_expiry_week": 0.0,
+                "days_to_next_holiday": 0.0,
+                "riv_level": 1.9871175289154053,
+                "riv_change_1d": 3.356180429458618,
+                "riv_change_3d": 4.252772808074951,
+                "iv_term_structure_slope": 3.5428390502929688,
+                "iv_skew_25d": 3.3972816467285156,
+                "iv_rv_spread_5d": 4.905667781829834,
+                "iv_rv_spread_10d": 0.0,
+                "pcr_volume": 2.432499647140503,
+                "pcr_oi": 3.137136936187744,
+                "oi_change_net_1d": 5.804195880889893,
+                "volume_zscore_session": 3.1459290981292725
+              }
+            },
+            "logistic": {
+              "best_params": {
+                "logistic__C": 0.01
+              },
+              "train_brier": 0.15007989648756676,
+              "val_raw": {
+                "brier": 0.2502758924801663,
+                "ece": 0.1569476787648887,
+                "auroc": 0.5086580086580086,
+                "logloss": 0.7178481045500922
+              },
+              "val_calibrated": {
+                "brier": 0.20577833313679245,
+                "ece": 3.125e-05,
+                "auroc": 0.6179653679653679,
+                "logloss": 0.5967299626548458
+              },
+              "bootstrap_ci_95": [
+                0.1643942870844366,
+                0.25058915888474487
+              ],
+              "feature_importance": {
+                "day_of_week": 0.0835653636336211,
+                "days_to_current_expiry": 0.11011680794569116,
+                "is_monthly_expiry_week": 0.03124361899068458,
+                "days_to_next_holiday": 0.038275042377696945,
+                "riv_level": 0.03230825296249744,
+                "riv_change_1d": 0.09289759619883409,
+                "riv_change_3d": 0.17509070920742284,
+                "iv_term_structure_slope": 0.12200720304162496,
+                "iv_skew_25d": 0.05945546304798681,
+                "iv_rv_spread_5d": 0.12603503362889323,
+                "iv_rv_spread_10d": 0.08243881377666606,
+                "pcr_volume": 0.04462952128967264,
+                "pcr_oi": 0.00478817189241131,
+                "oi_change_net_1d": 0.19208211441606612,
+                "volume_zscore_session": 0.07585460722334315
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "BANKNIFTY": {
+    "expansion": {
+      "horizon_medium": {
+        "aggregate": {
+          "status": "OK",
+          "n_valid_folds": 4,
+          "xgboost": {
+            "brier_mean": 0.15363131508417222,
+            "brier_std": 0.02870420714302692,
+            "ece_mean": 0.029256498133167542,
+            "auroc_mean": 0.5502558139534884,
+            "train_val_gap_mean": 0.017820946625736966
+          },
+          "logistic": {
+            "brier_mean": 0.13016725375468574,
+            "brier_std": 0.04283921242311085
+          },
+          "shap_stability_kendall_tau": {
+            "mean_tau": 0.4063492063492064,
+            "std_tau": 0.3356232755921043,
+            "n_pairs": 6
+          },
+          "baseline_comparison": {
+            "best_baseline": "persistence",
+            "best_baseline_brier": 0.1258025166923472,
+            "xgb_improvement": -0.027828798391825005,
+            "beats_baseline_0.02": "False"
+          }
+        },
+        "folds": [
+          {
+            "fold": 1,
+            "n_train": 161,
+            "n_val": 55,
+            "n_positive_train": 36,
+            "n_positive_val": 12,
+            "xgboost": {
+              "best_params": {
+                "subsample": 0.9,
+                "reg_lambda": 5.0,
+                "reg_alpha": 0.01,
+                "n_estimators": 50,
+                "min_child_weight": 20,
+                "max_depth": 3,
+                "learning_rate": 0.15,
+                "colsample_bytree": 1.0
+              },
+              "train_brier": 0.1736269652398718,
+              "val_raw": {
+                "brier": 0.17057896369795006,
+                "ece": 0.0006717895919626515,
+                "auroc": 0.5,
+                "logloss": 0.5245984193660741
+              },
+              "val_calibrated": {
+                "brier": 0.17057896369795006,
+                "ece": 0.0006717895919626515,
+                "auroc": 0.5,
+                "logloss": 0.5245984193660741
+              },
+              "bootstrap_ci_95": [
+                0.10923793266677496,
+                0.24214349990098766
+              ],
+              "train_val_gap": 0.003048001541921752,
+              "shap_importance": {
+                "day_of_week": 0.0,
+                "days_to_current_expiry": 0.0,
+                "is_monthly_expiry_week": 0.0,
+                "days_to_next_holiday": 0.0,
+                "riv_level": 0.0,
+                "riv_change_1d": 0.0,
+                "riv_change_3d": 0.0,
+                "iv_term_structure_slope": 0.0,
+                "iv_skew_25d": 0.0,
+                "iv_rv_spread_5d": 0.0,
+                "iv_rv_spread_10d": 0.0,
+                "pcr_volume": 0.0,
+                "pcr_oi": 0.0,
+                "oi_change_net_1d": 0.0,
+                "volume_zscore_session": 0.0
+              }
+            },
+            "logistic": {
+              "best_params": {
+                "logistic__C": 0.01
+              },
+              "train_brier": 0.1630061291600751,
+              "val_raw": {
+                "brier": 0.1749193716270603,
+                "ece": 0.14673259521900756,
+                "auroc": 0.5445736434108528,
+                "logloss": 0.5344602418335034
+              },
+              "val_calibrated": {
+                "brier": 0.15099270365726228,
+                "ece": 1.8181818181865636e-05,
+                "auroc": 0.6288759689922481,
+                "logloss": 0.47498783756614243
+              },
+              "bootstrap_ci_95": [
+                0.09426173463289256,
+                0.2182192925172054
+              ],
+              "feature_importance": {
+                "day_of_week": 0.008270222558453857,
+                "days_to_current_expiry": 0.050588933484928704,
+                "is_monthly_expiry_week": 0.05319020669316546,
+                "days_to_next_holiday": 0.05851881658760243,
+                "riv_level": 0.04983903081032028,
+                "riv_change_1d": 0.05697584972190111,
+                "riv_change_3d": 0.02964974515846053,
+                "iv_term_structure_slope": 0.07279870091688286,
+                "iv_skew_25d": 0.004896710835438004,
+                "iv_rv_spread_5d": 0.08558766468023021,
+                "iv_rv_spread_10d": 0.023106102613121977,
+                "pcr_volume": 0.01379884489096831,
+                "pcr_oi": 0.01638965620203437,
+                "oi_change_net_1d": 0.0864465176416047,
+                "volume_zscore_session": 0.06184263438195115
+              }
+            }
+          },
+          {
+            "fold": 2,
+            "n_train": 200,
+            "n_val": 59,
+            "n_positive_train": 48,
+            "n_positive_val": 7,
+            "xgboost": {
+              "best_params": {
+                "subsample": 0.9,
+                "reg_lambda": 5.0,
+                "reg_alpha": 0.01,
+                "n_estimators": 50,
+                "min_child_weight": 20,
+                "max_depth": 3,
+                "learning_rate": 0.15,
+                "colsample_bytree": 1.0
+              },
+              "train_brier": 0.1824258579503834,
+              "val_raw": {
+                "brier": 0.11808656606261517,
+                "ece": 0.1162708608780877,
+                "auroc": 0.5,
+                "logloss": 0.4078588422997008
+              },
+              "val_calibrated": {
+                "brier": 0.11808656606261517,
+                "ece": 0.1162708608780877,
+                "auroc": 0.5,
+                "logloss": 0.4078588422997008
+              },
+              "bootstrap_ci_95": [
+                0.08214282757782844,
+                0.16301623916859853
+              ],
+              "train_val_gap": 0.06433929188776824,
+              "shap_importance": {
+                "day_of_week": 0.0,
+                "days_to_current_expiry": 0.0,
+                "is_monthly_expiry_week": 0.0,
+                "days_to_next_holiday": 0.0,
+                "riv_level": 0.0,
+                "riv_change_1d": 0.0,
+                "riv_change_3d": 0.0,
+                "iv_term_structure_slope": 0.0,
+                "iv_skew_25d": 0.0,
+                "iv_rv_spread_5d": 0.0,
+                "iv_rv_spread_10d": 0.0,
+                "pcr_volume": 0.0,
+                "pcr_oi": 0.0,
+                "oi_change_net_1d": 0.0,
+                "volume_zscore_session": 0.0
+              }
+            },
+            "logistic": {
+              "best_params": {
+                "logistic__C": 0.01
+              },
+              "train_brier": 0.17347795594094712,
+              "val_raw": {
+                "brier": 0.11720222611439625,
+                "ece": 0.14634691355638907,
+                "auroc": 0.5741758241758241,
+                "logloss": 0.4067421460127457
+              },
+              "val_calibrated": {
+                "brier": 0.08796717138646175,
+                "ece": 1.6949152542383716e-05,
+                "auroc": 0.7005494505494506,
+                "logloss": 0.3100675878080988
+              },
+              "bootstrap_ci_95": [
+                0.03400618562725465,
+                0.1529894509464546
+              ],
+              "feature_importance": {
+                "day_of_week": 0.0021078335199833024,
+                "days_to_current_expiry": 0.014079393762940581,
+                "is_monthly_expiry_week": 0.034142130948186244,
+                "days_to_next_holiday": 0.08418067498342077,
+                "riv_level": 0.024153298929815367,
+                "riv_change_1d": 0.06776700356239329,
+                "riv_change_3d": 0.03085364292909649,
+                "iv_term_structure_slope": 0.059607716189115,
+                "iv_skew_25d": 0.012668029472068425,
+                "iv_rv_spread_5d": 0.09446207955260656,
+                "iv_rv_spread_10d": 0.02908561874826145,
+                "pcr_volume": 0.05933016059821705,
+                "pcr_oi": 0.005742546560388634,
+                "oi_change_net_1d": 0.05205402030465361,
+                "volume_zscore_session": 0.07831076580761336
+              }
+            }
+          },
+          {
+            "fold": 3,
+            "n_train": 236,
+            "n_val": 60,
+            "n_positive_train": 55,
+            "n_positive_val": 17,
+            "xgboost": {
+              "best_params": {
+                "subsample": 0.9,
+                "reg_lambda": 5.0,
+                "reg_alpha": 0.01,
+                "n_estimators": 50,
+                "min_child_weight": 20,
+                "max_depth": 3,
+                "learning_rate": 0.15,
+                "colsample_bytree": 1.0
+              },
+              "train_brier": 0.17598549068524016,
+              "val_raw": {
+                "brier": 0.20471177909146712,
+                "ece": 0.04942545369267462,
+                "auroc": 0.5341997264021887,
+                "logloss": 0.6005727450030864
+              },
+              "val_calibrated": {
+                "brier": 0.1909668763850842,
+                "ece": 1.6674151023203983e-05,
+                "auroc": 0.5930232558139535,
+                "logloss": 0.5657120709378151
+              },
+              "bootstrap_ci_95": [
+                0.14070117082235636,
+                0.24162276577056627
+              ],
+              "train_val_gap": -0.01498138569984403,
+              "shap_importance": {
+                "day_of_week": 0.0,
+                "days_to_current_expiry": 0.0,
+                "is_monthly_expiry_week": 0.0,
+                "days_to_next_holiday": 0.0,
+                "riv_level": 1.3665450811386108,
+                "riv_change_1d": 3.247363805770874,
+                "riv_change_3d": 0.0,
+                "iv_term_structure_slope": 1.553096890449524,
+                "iv_skew_25d": 0.0,
+                "iv_rv_spread_5d": 2.9113402366638184,
+                "iv_rv_spread_10d": 0.0,
+                "pcr_volume": 0.0,
+                "pcr_oi": 0.0,
+                "oi_change_net_1d": 0.0,
+                "volume_zscore_session": 0.0
+              }
+            },
+            "logistic": {
+              "best_params": {
+                "logistic__C": 0.01
+              },
+              "train_brier": 0.16956834963105102,
+              "val_raw": {
+                "brier": 0.2063363262528147,
+                "ece": 0.0707575762970302,
+                "auroc": 0.5348837209302326,
+                "logloss": 0.6030890580815415
+              },
+              "val_calibrated": {
+                "brier": 0.19034097575757575,
+                "ece": 6.666666666666667e-05,
+                "auroc": 0.6231190150478796,
+                "logloss": 0.5552061973591802
+              },
+              "bootstrap_ci_95": [
+                0.1451398702238292,
+                0.23847303053030303
+              ],
+              "feature_importance": {
+                "day_of_week": 0.006976171409716395,
+                "days_to_current_expiry": 0.027175542858509653,
+                "is_monthly_expiry_week": 0.05651558787106693,
+                "days_to_next_holiday": 0.07919819442569544,
+                "riv_level": 0.027182928236311504,
+                "riv_change_1d": 0.07497272139344047,
+                "riv_change_3d": 0.030649984701058612,
+                "iv_term_structure_slope": 0.060722031546322934,
+                "iv_skew_25d": 0.03336092535983773,
+                "iv_rv_spread_5d": 0.09849423229575582,
+                "iv_rv_spread_10d": 0.024529640038394807,
+                "pcr_volume": 0.05277296324493588,
+                "pcr_oi": 0.008282850271941443,
+                "oi_change_net_1d": 0.08534247558797091,
+                "volume_zscore_session": 0.07444598988809684
+              }
+            }
+          },
+          {
+            "fold": 4,
+            "n_train": 278,
+            "n_val": 60,
+            "n_positive_train": 62,
+            "n_positive_val": 10,
+            "xgboost": {
+              "best_params": {
+                "subsample": 0.9,
+                "reg_lambda": 5.0,
+                "reg_alpha": 0.01,
+                "n_estimators": 50,
+                "min_child_weight": 20,
+                "max_depth": 3,
+                "learning_rate": 0.15,
+                "colsample_bytree": 1.0
+              },
+              "train_brier": 0.15377073296414132,
+              "val_raw": {
+                "brier": 0.1678380984410488,
+                "ece": 0.1367153183867534,
+                "auroc": 0.39,
+                "logloss": 0.5186181194807896
+              },
+              "val_calibrated": {
+                "brier": 0.1348928541910394,
+                "ece": 6.66679115966055e-05,
+                "auroc": 0.608,
+                "logloss": 0.43066333354997327
+              },
+              "bootstrap_ci_95": [
+                0.07670438338852503,
+                0.18956554728903566
+              ],
+              "train_val_gap": 0.018877878773101903,
+              "shap_importance": {
+                "day_of_week": 0.0,
+                "days_to_current_expiry": 3.974810838699341,
+                "is_monthly_expiry_week": 0.0,
+                "days_to_next_holiday": 0.0,
+                "riv_level": 2.913128137588501,
+                "riv_change_1d": 2.831524610519409,
+                "riv_change_3d": 2.6816670894622803,
+                "iv_term_structure_slope": 2.4080333709716797,
+                "iv_skew_25d": 1.7285233736038208,
+                "iv_rv_spread_5d": 1.7975620031356812,
+                "iv_rv_spread_10d": 2.9792628288269043,
+                "pcr_volume": 0.0,
+                "pcr_oi": 2.1285314559936523,
+                "oi_change_net_1d": 0.0,
+                "volume_zscore_session": 3.1426737308502197
+              }
+            },
+            "logistic": {
+              "best_params": {
+                "logistic__C": 0.01
+              },
+              "train_brier": 0.1657875593820768,
+              "val_raw": {
+                "brier": 0.13441563599455494,
+                "ece": 0.04039020773838213,
+                "auroc": 0.7600000000000001,
+                "logloss": 0.4374570570041007
+              },
+              "val_calibrated": {
+                "brier": 0.09136816421744326,
+                "ece": 0.00018333333333332875,
+                "auroc": 0.8250000000000001,
+                "logloss": 0.30103159741569663
+              },
+              "bootstrap_ci_95": [
+                0.04100427731589075,
+                0.14274970105884643
+              ],
+              "feature_importance": {
+                "day_of_week": 0.011671879371832098,
+                "days_to_current_expiry": 0.0379058830541919,
+                "is_monthly_expiry_week": 0.07420179323381473,
+                "days_to_next_holiday": 0.0727545539896747,
+                "riv_level": 0.007323370309761381,
+                "riv_change_1d": 0.0682069261700805,
+                "riv_change_3d": 0.01820571160298713,
+                "iv_term_structure_slope": 0.06377162625350212,
+                "iv_skew_25d": 0.04759812232458155,
+                "iv_rv_spread_5d": 0.0813220039464377,
+                "iv_rv_spread_10d": 0.0026460059918707317,
+                "pcr_volume": 0.051497260195774906,
+                "pcr_oi": 0.011159489832294969,
+                "oi_change_net_1d": 0.0909371714795433,
+                "volume_zscore_session": 0.07976843865132044
+              }
+            }
+          }
+        ]
+      },
+      "horizon_short": {
+        "aggregate": {
+          "status": "OK",
+          "n_valid_folds": 6,
+          "xgboost": {
+            "brier_mean": 0.11173843557936858,
+            "brier_std": 0.04369285180415574,
+            "ece_mean": 0.021455017111837952,
+            "auroc_mean": 0.6572730304581484,
+            "train_val_gap_mean": 0.05290042630150799
+          },
+          "logistic": {
+            "brier_mean": 0.110940495748505,
+            "brier_std": 0.03341191865098431
+          },
+          "shap_stability_kendall_tau": {
+            "mean_tau": 0.24952380952380956,
+            "std_tau": 0.43132378979162705,
+            "n_pairs": 15
+          },
+          "baseline_comparison": {
+            "best_baseline": "naive",
+            "best_baseline_brier": 0.1319366872415772,
+            "xgb_improvement": 0.02019825166220862,
+            "beats_baseline_0.02": "True"
+          }
+        },
+        "folds": [
+          {
+            "fold": 1,
+            "n_train": 147,
+            "n_val": 57,
+            "n_positive_train": 35,
+            "n_positive_val": 11,
+            "xgboost": {
+              "best_params": {
+                "subsample": 0.9,
+                "reg_lambda": 5.0,
+                "reg_alpha": 0.01,
+                "n_estimators": 50,
+                "min_child_weight": 20,
+                "max_depth": 3,
+                "learning_rate": 0.15,
+                "colsample_bytree": 1.0
+              },
+              "train_brier": 0.18145461839684668,
+              "val_raw": {
+                "brier": 0.15719432422833135,
+                "ece": 0.03813261682527108,
+                "auroc": 0.5,
+                "logloss": 0.49478380932969096
+              },
+              "val_calibrated": {
+                "brier": 0.15719432422833135,
+                "ece": 0.03813261682527108,
+                "auroc": 0.5,
+                "logloss": 0.49478380932969096
+              },
+              "bootstrap_ci_95": [
+                0.11002153001177382,
+                0.214037541259283
+              ],
+              "train_val_gap": 0.02426029416851533,
+              "shap_importance": {
+                "day_of_week": 0.0,
+                "days_to_current_expiry": 0.0,
+                "is_monthly_expiry_week": 0.0,
+                "days_to_next_holiday": 0.0,
+                "riv_level": 0.0,
+                "riv_change_1d": 0.0,
+                "riv_change_3d": 0.0,
+                "iv_term_structure_slope": 0.0,
+                "iv_skew_25d": 0.0,
+                "iv_rv_spread_5d": 0.0,
+                "iv_rv_spread_10d": 0.0,
+                "pcr_volume": 0.0,
+                "pcr_oi": 0.0,
+                "oi_change_net_1d": 0.0,
+                "volume_zscore_session": 0.0
+              }
+            },
+            "logistic": {
+              "best_params": {
+                "logistic__C": 0.01
+              },
+              "train_brier": 0.16239149123341345,
+              "val_raw": {
+                "brier": 0.15975314605607718,
+                "ece": 0.09349375638466026,
+                "auroc": 0.48616600790513836,
+                "logloss": 0.51254617354253
+              },
+              "val_calibrated": {
+                "brier": 0.1428229840510367,
+                "ece": 1.754385964915009e-05,
+                "auroc": 0.6027667984189724,
+                "logloss": 0.45658193488895965
+              },
+              "bootstrap_ci_95": [
+                0.08701441837755547,
+                0.211718953892997
+              ],
+              "feature_importance": {
+                "day_of_week": 0.06352322510086249,
+                "days_to_current_expiry": 0.10741811710926992,
+                "is_monthly_expiry_week": 0.01286224219422765,
+                "days_to_next_holiday": 0.03297171610480409,
+                "riv_level": 0.056084753547212166,
+                "riv_change_1d": 0.062400526104815085,
+                "riv_change_3d": 0.06558788251305042,
+                "iv_term_structure_slope": 0.032472440602054925,
+                "iv_skew_25d": 0.02144136687909836,
+                "iv_rv_spread_5d": 0.06444808561520735,
+                "iv_rv_spread_10d": 0.08546482652605158,
+                "pcr_volume": 0.028054406362038084,
+                "pcr_oi": 0.05680769883256653,
+                "oi_change_net_1d": 0.11515693912078119,
+                "volume_zscore_session": 0.06628356894793701
+              }
+            }
+          },
+          {
+            "fold": 2,
+            "n_train": 186,
+            "n_val": 62,
+            "n_positive_train": 44,
+            "n_positive_val": 9,
+            "xgboost": {
+              "best_params": {
+                "subsample": 0.9,
+                "reg_lambda": 5.0,
+                "reg_alpha": 0.01,
+                "n_estimators": 50,
+                "min_child_weight": 20,
+                "max_depth": 3,
+                "learning_rate": 0.15,
+                "colsample_bytree": 1.0
+              },
+              "train_brier": 0.18062601225303515,
+              "val_raw": {
+                "brier": 0.13151858052852783,
+                "ece": 0.08619217141982047,
+                "auroc": 0.5,
+                "logloss": 0.43741697144327807
+              },
+              "val_calibrated": {
+                "brier": 0.13151858052852783,
+                "ece": 0.08619217141982047,
+                "auroc": 0.5,
+                "logloss": 0.43741697144327807
+              },
+              "bootstrap_ci_95": [
+                0.08818849371278606,
+                0.1835146847074179
+              ],
+              "train_val_gap": 0.04910743172450732,
+              "shap_importance": {
+                "day_of_week": 0.0,
+                "days_to_current_expiry": 0.0,
+                "is_monthly_expiry_week": 0.0,
+                "days_to_next_holiday": 0.0,
+                "riv_level": 0.0,
+                "riv_change_1d": 0.0,
+                "riv_change_3d": 0.0,
+                "iv_term_structure_slope": 0.0,
+                "iv_skew_25d": 0.0,
+                "iv_rv_spread_5d": 0.0,
+                "iv_rv_spread_10d": 0.0,
+                "pcr_volume": 0.0,
+                "pcr_oi": 0.0,
+                "oi_change_net_1d": 0.0,
+                "volume_zscore_session": 0.0
+              }
+            },
+            "logistic": {
+              "best_params": {
+                "logistic__C": 0.01
+              },
+              "train_brier": 0.16396168200201253,
+              "val_raw": {
+                "brier": 0.12867197130008018,
+                "ece": 0.05543252854843061,
+                "auroc": 0.4884696016771488,
+                "logloss": 0.42853385176918635
+              },
+              "val_calibrated": {
+                "brier": 0.1212903709677419,
+                "ece": 4.838709677419355e-05,
+                "auroc": 0.5702306079664571,
+                "logloss": 0.4010336372948378
+              },
+              "bootstrap_ci_95": [
+                0.06596125129928312,
+                0.18748119672939068
+              ],
+              "feature_importance": {
+                "day_of_week": 0.08336141739506918,
+                "days_to_current_expiry": 0.07030740047094623,
+                "is_monthly_expiry_week": 0.017491397584623616,
+                "days_to_next_holiday": 0.03943222424251192,
+                "riv_level": 0.04915419515727709,
+                "riv_change_1d": 0.07834926819807587,
+                "riv_change_3d": 0.08136697202522306,
+                "iv_term_structure_slope": 0.030743771220769177,
+                "iv_skew_25d": 0.024488009586412066,
+                "iv_rv_spread_5d": 0.0665512150011186,
+                "iv_rv_spread_10d": 0.08928255433499657,
+                "pcr_volume": 0.07601876815074916,
+                "pcr_oi": 0.04840770349523657,
+                "oi_change_net_1d": 0.12093674355382768,
+                "volume_zscore_session": 0.057182414355790356
+              }
+            }
+          },
+          {
+            "fold": 3,
+            "n_train": 225,
+            "n_val": 64,
+            "n_positive_train": 51,
+            "n_positive_val": 14,
+            "xgboost": {
+              "best_params": {
+                "subsample": 0.9,
+                "reg_lambda": 5.0,
+                "reg_alpha": 0.01,
+                "n_estimators": 50,
+                "min_child_weight": 20,
+                "max_depth": 3,
+                "learning_rate": 0.15,
+                "colsample_bytree": 1.0
+              },
+              "train_brier": 0.17530831194889004,
+              "val_raw": {
+                "brier": 0.17091075413645762,
+                "ece": 0.003509506583213806,
+                "auroc": 0.5,
+                "logloss": 0.5253570806316796
+              },
+              "val_calibrated": {
+                "brier": 0.17091075413645762,
+                "ece": 0.003509506583213806,
+                "auroc": 0.5,
+                "logloss": 0.5253570806316796
+              },
+              "bootstrap_ci_95": [
+                0.11883441162081021,
+                0.22298709665210503
+              ],
+              "train_val_gap": 0.004397557812432423,
+              "shap_importance": {
+                "day_of_week": 0.0,
+                "days_to_current_expiry": 0.0,
+                "is_monthly_expiry_week": 0.0,
+                "days_to_next_holiday": 0.0,
+                "riv_level": 0.0,
+                "riv_change_1d": 0.0,
+                "riv_change_3d": 0.0,
+                "iv_term_structure_slope": 0.0,
+                "iv_skew_25d": 0.0,
+                "iv_rv_spread_5d": 0.0,
+                "iv_rv_spread_10d": 0.0,
+                "pcr_volume": 0.0,
+                "pcr_oi": 0.0,
+                "oi_change_net_1d": 0.0,
+                "volume_zscore_session": 0.0
+              }
+            },
+            "logistic": {
+              "best_params": {
+                "logistic__C": 0.01
+              },
+              "train_brier": 0.16089081566514304,
+              "val_raw": {
+                "brier": 0.16783584781961464,
+                "ece": 0.01954862670995674,
+                "auroc": 0.6385714285714286,
+                "logloss": 0.5153300754900483
+              },
+              "val_calibrated": {
+                "brier": 0.14991325694444446,
+                "ece": 6.250000000004424e-05,
+                "auroc": 0.7092857142857143,
+                "logloss": 0.4631421299339128
+              },
+              "bootstrap_ci_95": [
+                0.0985424883246528,
+                0.20559379156539356
+              ],
+              "feature_importance": {
+                "day_of_week": 0.13747546233622537,
+                "days_to_current_expiry": 0.041702997436565484,
+                "is_monthly_expiry_week": 0.011367540807503915,
+                "days_to_next_holiday": 0.036516085284994906,
+                "riv_level": 0.041030641989688484,
+                "riv_change_1d": 0.07359924491762325,
+                "riv_change_3d": 0.059230905934333736,
+                "iv_term_structure_slope": 0.03342664434118191,
+                "iv_skew_25d": 0.003894614229247953,
+                "iv_rv_spread_5d": 0.062349354004294186,
+                "iv_rv_spread_10d": 0.08434410483717654,
+                "pcr_volume": 0.06752012984897088,
+                "pcr_oi": 0.03483718172049071,
+                "oi_change_net_1d": 0.1427154949675287,
+                "volume_zscore_session": 0.04085467288202564
+              }
+            }
+          },
+          {
+            "fold": 4,
+            "n_train": 269,
+            "n_val": 63,
+            "n_positive_train": 57,
+            "n_positive_val": 11,
+            "xgboost": {
+              "best_params": {
+                "subsample": 0.9,
+                "reg_lambda": 5.0,
+                "reg_alpha": 0.01,
+                "n_estimators": 50,
+                "min_child_weight": 20,
+                "max_depth": 3,
+                "learning_rate": 0.15,
+                "colsample_bytree": 1.0
+              },
+              "train_brier": 0.15934860186903274,
+              "val_raw": {
+                "brier": 0.12864739137851247,
+                "ece": 0.0853067258047679,
+                "auroc": 0.7543706293706294,
+                "logloss": 0.4160128347125904
+              },
+              "val_calibrated": {
+                "brier": 0.08114153590121716,
+                "ece": 0.00019047647485480212,
+                "auroc": 0.826048951048951,
+                "logloss": 0.2812481158089638
+              },
+              "bootstrap_ci_95": [
+                0.030493996304966912,
+                0.14303004143697465
+              ],
+              "train_val_gap": 0.07820706596781558,
+              "shap_importance": {
+                "day_of_week": 0.0,
+                "days_to_current_expiry": 0.0,
+                "is_monthly_expiry_week": 0.0,
+                "days_to_next_holiday": 0.0,
+                "riv_level": 0.0,
+                "riv_change_1d": 1.9105615615844727,
+                "riv_change_3d": 1.6471598148345947,
+                "iv_term_structure_slope": 0.6837007403373718,
+                "iv_skew_25d": 0.0,
+                "iv_rv_spread_5d": 0.9110222458839417,
+                "iv_rv_spread_10d": 0.0,
+                "pcr_volume": 1.3416692018508911,
+                "pcr_oi": 0.5304291248321533,
+                "oi_change_net_1d": 1.6642894744873047,
+                "volume_zscore_session": 2.446000814437866
+              }
+            },
+            "logistic": {
+              "best_params": {
+                "logistic__C": 0.01
+              },
+              "train_brier": 0.1532361399302461,
+              "val_raw": {
+                "brier": 0.14118862384662414,
+                "ece": 0.03458741731966834,
+                "auroc": 0.5874125874125874,
+                "logloss": 0.4538307560739288
+              },
+              "val_calibrated": {
+                "brier": 0.11773604677426525,
+                "ece": 6.349206349206455e-05,
+                "auroc": 0.6888111888111889,
+                "logloss": 0.3850403665391555
+              },
+              "bootstrap_ci_95": [
+                0.06343468814923107,
+                0.1793004858085158
+              ],
+              "feature_importance": {
+                "day_of_week": 0.1743457024305542,
+                "days_to_current_expiry": 0.07170597811071594,
+                "is_monthly_expiry_week": 0.00503940869323358,
+                "days_to_next_holiday": 0.02365976259485921,
+                "riv_level": 0.030465879338706682,
+                "riv_change_1d": 0.06539562447172632,
+                "riv_change_3d": 0.0565491743319018,
+                "iv_term_structure_slope": 0.02863956724549213,
+                "iv_skew_25d": 0.01087259839774414,
+                "iv_rv_spread_5d": 0.06355587714229681,
+                "iv_rv_spread_10d": 0.06527884700914684,
+                "pcr_volume": 0.05463812073586725,
+                "pcr_oi": 0.04321521777227169,
+                "oi_change_net_1d": 0.1572358498057386,
+                "volume_zscore_session": 0.045393177042682115
+              }
+            }
+          },
+          {
+            "fold": 5,
+            "n_train": 291,
+            "n_val": 62,
+            "n_positive_train": 65,
+            "n_positive_val": 4,
+            "xgboost": {
+              "best_params": {
+                "subsample": 0.9,
+                "reg_lambda": 5.0,
+                "reg_alpha": 0.01,
+                "n_estimators": 50,
+                "min_child_weight": 20,
+                "max_depth": 3,
+                "learning_rate": 0.15,
+                "colsample_bytree": 1.0
+              },
+              "train_brier": 0.14998810059974912,
+              "val_raw": {
+                "brier": 0.07489045819415233,
+                "ece": 0.1077383159389419,
+                "auroc": 0.7025862068965518,
+                "logloss": 0.2817425574143397
+              },
+              "val_calibrated": {
+                "brier": 0.055914413978536,
+                "ece": 0.0004354866555771768,
+                "auroc": 0.7974137931034483,
+                "logloss": 0.19504988771474557
+              },
+              "bootstrap_ci_95": [
+                0.01755964006875672,
+                0.10122621034043883
+              ],
+              "train_val_gap": 0.09407368662121313,
+              "shap_importance": {
+                "day_of_week": 5.094139099121094,
+                "days_to_current_expiry": 0.6885858774185181,
+                "is_monthly_expiry_week": 0.0,
+                "days_to_next_holiday": 1.7431378364562988,
+                "riv_level": 0.0,
+                "riv_change_1d": 3.205016613006592,
+                "riv_change_3d": 2.5926027297973633,
+                "iv_term_structure_slope": 1.4310798645019531,
+                "iv_skew_25d": 0.0,
+                "iv_rv_spread_5d": 0.0,
+                "iv_rv_spread_10d": 1.9464266300201416,
+                "pcr_volume": 1.9874544143676758,
+                "pcr_oi": 1.4939758777618408,
+                "oi_change_net_1d": 1.745888590812683,
+                "volume_zscore_session": 3.053915023803711
+              }
+            },
+            "logistic": {
+              "best_params": {
+                "logistic__C": 0.01
+              },
+              "train_brier": 0.15994955851528683,
+              "val_raw": {
+                "brier": 0.08011178609781007,
+                "ece": 0.13560293788017094,
+                "auroc": 0.47413793103448276,
+                "logloss": 0.3147678979159444
+              },
+              "val_calibrated": {
+                "brier": 0.05865131671554253,
+                "ece": 0.00029032258064516647,
+                "auroc": 0.6551724137931034,
+                "logloss": 0.2164838272479191
+              },
+              "bootstrap_ci_95": [
+                0.01865869688416422,
+                0.11130395881098372
+              ],
+              "feature_importance": {
+                "day_of_week": 0.16213786041557507,
+                "days_to_current_expiry": 0.008272248360712109,
+                "is_monthly_expiry_week": 0.001354560084026984,
+                "days_to_next_holiday": 0.048849682047283925,
+                "riv_level": 0.03071619522837277,
+                "riv_change_1d": 0.07328664849341097,
+                "riv_change_3d": 0.07022945661647086,
+                "iv_term_structure_slope": 0.016551266857988103,
+                "iv_skew_25d": 0.016215107917285733,
+                "iv_rv_spread_5d": 0.07579134762221967,
+                "iv_rv_spread_10d": 0.056713507234211064,
+                "pcr_volume": 0.09304862868718132,
+                "pcr_oi": 0.05929747759334671,
+                "oi_change_net_1d": 0.1523396333232184,
+                "volume_zscore_session": 0.03252674299307236
+              }
+            }
+          },
+          {
+            "fold": 6,
+            "n_train": 319,
+            "n_val": 63,
+            "n_positive_train": 67,
+            "n_positive_val": 6,
+            "xgboost": {
+              "best_params": {
+                "subsample": 0.9,
+                "reg_lambda": 5.0,
+                "reg_alpha": 0.01,
+                "n_estimators": 50,
+                "min_child_weight": 20,
+                "max_depth": 3,
+                "learning_rate": 0.15,
+                "colsample_bytree": 1.0
+              },
+              "train_brier": 0.14110752621770567,
+              "val_raw": {
+                "brier": 0.0883767398547141,
+                "ece": 0.06943832006719378,
+                "auroc": 0.739766081871345,
+                "logloss": 0.31023123511273043
+              },
+              "val_calibrated": {
+                "brier": 0.0737510047031415,
+                "ece": 0.00026984471229038795,
+                "auroc": 0.8201754385964912,
+                "logloss": 0.24193908015530619
+              },
+              "bootstrap_ci_95": [
+                0.03555558430529397,
+                0.1245341855431566
+              ],
+              "train_val_gap": 0.06735652151456417,
+              "shap_importance": {
+                "day_of_week": 5.506803512573242,
+                "days_to_current_expiry": 0.0,
+                "is_monthly_expiry_week": 0.0,
+                "days_to_next_holiday": 2.1971442699432373,
+                "riv_level": 1.6451786756515503,
+                "riv_change_1d": 3.1440553665161133,
+                "riv_change_3d": 4.797059059143066,
+                "iv_term_structure_slope": 1.5981565713882446,
+                "iv_skew_25d": 0.0,
+                "iv_rv_spread_5d": 0.0,
+                "iv_rv_spread_10d": 2.052278518676758,
+                "pcr_volume": 0.0,
+                "pcr_oi": 1.3009319305419922,
+                "oi_change_net_1d": 2.1366798877716064,
+                "volume_zscore_session": 3.697594165802002
+              }
+            },
+            "logistic": {
+              "best_params": {
+                "logistic__C": 0.01
+              },
+              "train_brier": 0.15295896780029797,
+              "val_raw": {
+                "brier": 0.0894212222243769,
+                "ece": 0.08087994512386745,
+                "auroc": 0.7339181286549707,
+                "logloss": 0.3279567787841898
+              },
+              "val_calibrated": {
+                "brier": 0.07522899903799905,
+                "ece": 0.0005238095238095432,
+                "auroc": 0.8099415204678363,
+                "logloss": 0.23612120668025485
+              },
+              "bootstrap_ci_95": [
+                0.036725280727549665,
+                0.12533719488791228
+              ],
+              "feature_importance": {
+                "day_of_week": 0.17043691601433633,
+                "days_to_current_expiry": 0.02817567863915336,
+                "is_monthly_expiry_week": 0.010368993280609615,
+                "days_to_next_holiday": 0.06885254149154506,
+                "riv_level": 0.04298211209425207,
+                "riv_change_1d": 0.07678673263910533,
+                "riv_change_3d": 0.07148703803281195,
+                "iv_term_structure_slope": 0.028341480286249762,
+                "iv_skew_25d": 0.005884558742486,
+                "iv_rv_spread_5d": 0.07580985091994259,
+                "iv_rv_spread_10d": 0.03553427153943386,
+                "pcr_volume": 0.08590503449326979,
+                "pcr_oi": 0.044365792924336,
+                "oi_change_net_1d": 0.1631665213726452,
+                "volume_zscore_session": 0.03214745127040062
+              }
+            }
+          }
+        ]
+      }
+    },
+    "compression": {
+      "horizon_medium": {
+        "aggregate": {
+          "status": "OK",
+          "n_valid_folds": 6,
+          "xgboost": {
+            "brier_mean": 0.17149878819759393,
+            "brier_std": 0.031877740297914785,
+            "ece_mean": 0.03997014247210217,
+            "auroc_mean": 0.6056928402855452,
+            "train_val_gap_mean": -0.0023975791485722786
+          },
+          "logistic": {
+            "brier_mean": 0.1659527890886997,
+            "brier_std": 0.035367045414323485
+          },
+          "shap_stability_kendall_tau": {
+            "mean_tau": 0.27619047619047615,
+            "std_tau": 0.46521965487978917,
+            "n_pairs": 15
+          },
+          "baseline_comparison": {
+            "best_baseline": "persistence",
+            "best_baseline_brier": 0.1723287578753162,
+            "xgb_improvement": 0.0008299696777222809,
+            "beats_baseline_0.02": "False"
+          }
+        },
+        "folds": [
+          {
+            "fold": 1,
+            "n_train": 161,
+            "n_val": 55,
+            "n_positive_train": 43,
+            "n_positive_val": 6,
+            "xgboost": {
+              "best_params": {
+                "subsample": 0.9,
+                "reg_lambda": 5.0,
+                "reg_alpha": 0.01,
+                "n_estimators": 50,
+                "min_child_weight": 20,
+                "max_depth": 3,
+                "learning_rate": 0.15,
+                "colsample_bytree": 1.0
+              },
+              "train_brier": 0.19575122902323966,
+              "val_raw": {
+                "brier": 0.1226637852980479,
+                "ece": 0.1596048328009519,
+                "auroc": 0.5,
+                "logloss": 0.42215294877460213
+              },
+              "val_calibrated": {
+                "brier": 0.1226637852980479,
+                "ece": 0.1596048328009519,
+                "auroc": 0.5,
+                "logloss": 0.42215294877460213
+              },
+              "bootstrap_ci_95": [
+                0.08901952957322767,
+                0.16471910495407308
+              ],
+              "train_val_gap": 0.07308744372519176,
+              "shap_importance": {
+                "day_of_week": 0.0,
+                "days_to_current_expiry": 0.0,
+                "is_monthly_expiry_week": 0.0,
+                "days_to_next_holiday": 0.0,
+                "riv_level": 0.0,
+                "riv_change_1d": 0.0,
+                "riv_change_3d": 0.0,
+                "iv_term_structure_slope": 0.0,
+                "iv_skew_25d": 0.0,
+                "iv_rv_spread_5d": 0.0,
+                "iv_rv_spread_10d": 0.0,
+                "pcr_volume": 0.0,
+                "pcr_oi": 0.0,
+                "oi_change_net_1d": 0.0,
+                "volume_zscore_session": 0.0
+              }
+            },
+            "logistic": {
+              "best_params": {
+                "logistic__C": 0.01
+              },
+              "train_brier": 0.18541773279373142,
+              "val_raw": {
+                "brier": 0.10230153802880569,
+                "ece": 0.07348579098591264,
+                "auroc": 0.6360544217687075,
+                "logloss": 0.35086346682136554
+              },
+              "val_calibrated": {
+                "brier": 0.09096032946269418,
+                "ece": 0.0003090909090909283,
+                "auroc": 0.717687074829932,
+                "logloss": 0.2981773613769126
+              },
+              "bootstrap_ci_95": [
+                0.04146127140629159,
+                0.14861771351747471
+              ],
+              "feature_importance": {
+                "day_of_week": 0.06422923371231572,
+                "days_to_current_expiry": 0.0649541035384876,
+                "is_monthly_expiry_week": 0.07392386671903016,
+                "days_to_next_holiday": 0.03405629496880112,
+                "riv_level": 0.034382622455476894,
+                "riv_change_1d": 0.003848007234590852,
+                "riv_change_3d": 0.015353989445189757,
+                "iv_term_structure_slope": 0.001988757387848784,
+                "iv_skew_25d": 0.04845718795837759,
+                "iv_rv_spread_5d": 0.050206098146919405,
+                "iv_rv_spread_10d": 0.004066981010299955,
+                "pcr_volume": 0.00469902700792646,
+                "pcr_oi": 0.04999222251149537,
+                "oi_change_net_1d": 0.10773307682030282,
+                "volume_zscore_session": 0.010816718202267303
+              }
+            }
+          },
+          {
+            "fold": 2,
+            "n_train": 200,
+            "n_val": 59,
+            "n_positive_train": 50,
+            "n_positive_val": 18,
+            "xgboost": {
+              "best_params": {
+                "subsample": 0.9,
+                "reg_lambda": 5.0,
+                "reg_alpha": 0.01,
+                "n_estimators": 50,
+                "min_child_weight": 20,
+                "max_depth": 3,
+                "learning_rate": 0.15,
+                "colsample_bytree": 1.0
+              },
+              "train_brier": 0.18750000251276688,
+              "val_raw": {
+                "brier": 0.21503685287224714,
+                "ece": 0.05503461825645578,
+                "auroc": 0.5,
+                "logloss": 0.6228372041911268
+              },
+              "val_calibrated": {
+                "brier": 0.21503685287224714,
+                "ece": 0.05503461825645578,
+                "auroc": 0.5,
+                "logloss": 0.6228372041911268
+              },
+              "bootstrap_ci_95": [
+                0.1557267136364435,
+                0.2743469921080508
+              ],
+              "train_val_gap": -0.027536850359480253,
+              "shap_importance": {
+                "day_of_week": 0.0,
+                "days_to_current_expiry": 0.0,
+                "is_monthly_expiry_week": 0.0,
+                "days_to_next_holiday": 0.0,
+                "riv_level": 0.0,
+                "riv_change_1d": 0.0,
+                "riv_change_3d": 0.0,
+                "iv_term_structure_slope": 0.0,
+                "iv_skew_25d": 0.0,
+                "iv_rv_spread_5d": 0.0,
+                "iv_rv_spread_10d": 0.0,
+                "pcr_volume": 0.0,
+                "pcr_oi": 0.0,
+                "oi_change_net_1d": 0.0,
+                "volume_zscore_session": 0.0
+              }
+            },
+            "logistic": {
+              "best_params": {
+                "logistic__C": 0.01
+              },
+              "train_brier": 0.1803647542665666,
+              "val_raw": {
+                "brier": 0.21782856639536832,
+                "ece": 0.09148383568675898,
+                "auroc": 0.5108401084010838,
+                "logloss": 0.6291365862017062
+              },
+              "val_calibrated": {
+                "brier": 0.19945971088184722,
+                "ece": 0.00011864406779675695,
+                "auroc": 0.5880758807588076,
+                "logloss": 0.5685805380491724
+              },
+              "bootstrap_ci_95": [
+                0.16003523122866223,
+                0.23830501099327517
+              ],
+              "feature_importance": {
+                "day_of_week": 0.07608361766223833,
+                "days_to_current_expiry": 0.01606189117457158,
+                "is_monthly_expiry_week": 0.06252789583289177,
+                "days_to_next_holiday": 0.020277666391711396,
+                "riv_level": 0.0513801876493527,
+                "riv_change_1d": 0.00833415320264611,
+                "riv_change_3d": 0.014839834566360038,
+                "iv_term_structure_slope": 0.005231627145975424,
+                "iv_skew_25d": 0.057373950307361365,
+                "iv_rv_spread_5d": 0.052797020280198254,
+                "iv_rv_spread_10d": 0.01000086045519027,
+                "pcr_volume": 0.041720984928048654,
+                "pcr_oi": 0.0349640340953075,
+                "oi_change_net_1d": 0.08644817234349521,
+                "volume_zscore_session": 0.015998560033656767
+              }
+            }
+          },
+          {
+            "fold": 3,
+            "n_train": 236,
+            "n_val": 60,
+            "n_positive_train": 53,
+            "n_positive_val": 15,
+            "xgboost": {
+              "best_params": {
+                "subsample": 0.9,
+                "reg_lambda": 5.0,
+                "reg_alpha": 0.01,
+                "n_estimators": 50,
+                "min_child_weight": 20,
+                "max_depth": 3,
+                "learning_rate": 0.15,
+                "colsample_bytree": 1.0
+              },
+              "train_brier": 0.17414224331262299,
+              "val_raw": {
+                "brier": 0.1881118432607141,
+                "ece": 0.0247354656457901,
+                "auroc": 0.5,
+                "logloss": 0.5640451966956044
+              },
+              "val_calibrated": {
+                "brier": 0.1881118432607141,
+                "ece": 0.0247354656457901,
+                "auroc": 0.5,
+                "logloss": 0.5640451966956044
+              },
+              "bootstrap_ci_95": [
+                0.13316475013155604,
+                0.2522167852447318
+              ],
+              "train_val_gap": -0.013969599948091105,
+              "shap_importance": {
+                "day_of_week": 0.0,
+                "days_to_current_expiry": 0.0,
+                "is_monthly_expiry_week": 0.0,
+                "days_to_next_holiday": 0.0,
+                "riv_level": 0.0,
+                "riv_change_1d": 0.0,
+                "riv_change_3d": 0.0,
+                "iv_term_structure_slope": 0.0,
+                "iv_skew_25d": 0.0,
+                "iv_rv_spread_5d": 0.0,
+                "iv_rv_spread_10d": 0.0,
+                "pcr_volume": 0.0,
+                "pcr_oi": 0.0,
+                "oi_change_net_1d": 0.0,
+                "volume_zscore_session": 0.0
+              }
+            },
+            "logistic": {
+              "best_params": {
+                "logistic__C": 0.01
+              },
+              "train_brier": 0.16413219773356688,
+              "val_raw": {
+                "brier": 0.1894554762589701,
+                "ece": 0.06818562759436421,
+                "auroc": 0.6162962962962962,
+                "logloss": 0.5678935549184415
+              },
+              "val_calibrated": {
+                "brier": 0.16712977962962963,
+                "ece": 0.00015000000000000001,
+                "auroc": 0.6933333333333334,
+                "logloss": 0.4910885768480347
+              },
+              "bootstrap_ci_95": [
+                0.12378226687242798,
+                0.21813733374485594
+              ],
+              "feature_importance": {
+                "day_of_week": 0.0782305662871775,
+                "days_to_current_expiry": 0.10535412348272007,
+                "is_monthly_expiry_week": 0.09171459507315223,
+                "days_to_next_holiday": 0.023807679531443377,
+                "riv_level": 0.07346209503994461,
+                "riv_change_1d": 0.013657989131712728,
+                "riv_change_3d": 0.01627998101433507,
+                "iv_term_structure_slope": 0.0010662072767671919,
+                "iv_skew_25d": 0.06769901685842458,
+                "iv_rv_spread_5d": 0.06443580577872224,
+                "iv_rv_spread_10d": 0.004309286758559307,
+                "pcr_volume": 0.0611956671608429,
+                "pcr_oi": 0.012562976755721945,
+                "oi_change_net_1d": 0.07451288284119446,
+                "volume_zscore_session": 0.032597885245709085
+              }
+            }
+          },
+          {
+            "fold": 4,
+            "n_train": 278,
+            "n_val": 60,
+            "n_positive_train": 69,
+            "n_positive_val": 17,
+            "xgboost": {
+              "best_params": {
+                "subsample": 0.9,
+                "reg_lambda": 5.0,
+                "reg_alpha": 0.01,
+                "n_estimators": 50,
+                "min_child_weight": 20,
+                "max_depth": 3,
+                "learning_rate": 0.15,
+                "colsample_bytree": 1.0
+              },
+              "train_brier": 0.15547124483852498,
+              "val_raw": {
+                "brier": 0.20907122201889222,
+                "ece": 0.14264050560692945,
+                "auroc": 0.5991792065663474,
+                "logloss": 0.6079065533618826
+              },
+              "val_calibrated": {
+                "brier": 0.1795604256387515,
+                "ece": 0.00011667486784668566,
+                "auroc": 0.6908344733242134,
+                "logloss": 0.5244905319106005
+              },
+              "bootstrap_ci_95": [
+                0.13459714954487564,
+                0.2257337270760844
+              ],
+              "train_val_gap": -0.024089180800226512,
+              "shap_importance": {
+                "day_of_week": 0.0,
+                "days_to_current_expiry": 2.157390832901001,
+                "is_monthly_expiry_week": 0.0,
+                "days_to_next_holiday": 0.5376314520835876,
+                "riv_level": 2.2187340259552,
+                "riv_change_1d": 2.5424535274505615,
+                "riv_change_3d": 4.793822288513184,
+                "iv_term_structure_slope": 2.49708890914917,
+                "iv_skew_25d": 2.9436264038085938,
+                "iv_rv_spread_5d": 6.040076732635498,
+                "iv_rv_spread_10d": 1.1961320638656616,
+                "pcr_volume": 1.8965054750442505,
+                "pcr_oi": 0.0,
+                "oi_change_net_1d": 5.754268646240234,
+                "volume_zscore_session": 0.0
+              }
+            },
+            "logistic": {
+              "best_params": {
+                "logistic__C": 0.01
+              },
+              "train_brier": 0.17744907242707306,
+              "val_raw": {
+                "brier": 0.20533391450164312,
+                "ece": 0.08462428668838856,
+                "auroc": 0.6060191518467852,
+                "logloss": 0.6015465659543656
+              },
+              "val_calibrated": {
+                "brier": 0.1831019185185185,
+                "ece": 6.666666666666667e-05,
+                "auroc": 0.6723666210670315,
+                "logloss": 0.5354023309130156
+              },
+              "bootstrap_ci_95": [
+                0.1381906864197531,
+                0.22902695989711935
+              ],
+              "feature_importance": {
+                "day_of_week": 0.07268185033701004,
+                "days_to_current_expiry": 0.002220921366667806,
+                "is_monthly_expiry_week": 0.07861800634027005,
+                "days_to_next_holiday": 0.041508260463895705,
+                "riv_level": 0.07074471779370928,
+                "riv_change_1d": 0.04553320059588062,
+                "riv_change_3d": 0.0894794125291499,
+                "iv_term_structure_slope": 0.00973990452942628,
+                "iv_skew_25d": 0.06026421634041853,
+                "iv_rv_spread_5d": 0.10099125712033578,
+                "iv_rv_spread_10d": 0.04733540829367668,
+                "pcr_volume": 0.06550623960840905,
+                "pcr_oi": 0.005781452185426436,
+                "oi_change_net_1d": 0.052072675495466327,
+                "volume_zscore_session": 0.017053080695931314
+              }
+            }
+          },
+          {
+            "fold": 5,
+            "n_train": 298,
+            "n_val": 58,
+            "n_positive_train": 72,
+            "n_positive_val": 16,
+            "xgboost": {
+              "best_params": {
+                "subsample": 0.9,
+                "reg_lambda": 5.0,
+                "reg_alpha": 0.01,
+                "n_estimators": 50,
+                "min_child_weight": 20,
+                "max_depth": 3,
+                "learning_rate": 0.15,
+                "colsample_bytree": 1.0
+              },
+              "train_brier": 0.1503026541191115,
+              "val_raw": {
+                "brier": 0.21909545023548135,
+                "ece": 0.1785716163957941,
+                "auroc": 0.5476190476190477,
+                "logloss": 0.6418474447479492
+              },
+              "val_calibrated": {
+                "brier": 0.1871869587385893,
+                "ece": 0.00010345316219045982,
+                "auroc": 0.6376488095238095,
+                "logloss": 0.5446220575657342
+              },
+              "bootstrap_ci_95": [
+                0.14283597475251988,
+                0.23950508877725893
+              ],
+              "train_val_gap": -0.03688430461947778,
+              "shap_importance": {
+                "day_of_week": 0.0,
+                "days_to_current_expiry": 0.0,
+                "is_monthly_expiry_week": 0.0,
+                "days_to_next_holiday": 0.0,
+                "riv_level": 1.9541624784469604,
+                "riv_change_1d": 2.9857420921325684,
+                "riv_change_3d": 3.463635206222534,
+                "iv_term_structure_slope": 2.5622665882110596,
+                "iv_skew_25d": 2.585174322128296,
+                "iv_rv_spread_5d": 7.383169174194336,
+                "iv_rv_spread_10d": 0.0,
+                "pcr_volume": 3.5566022396087646,
+                "pcr_oi": 0.0,
+                "oi_change_net_1d": 4.736021995544434,
+                "volume_zscore_session": 0.0
+              }
+            },
+            "logistic": {
+              "best_params": {
+                "logistic__C": 0.01
+              },
+              "train_brier": 0.17355517879042423,
+              "val_raw": {
+                "brier": 0.20214056314062637,
+                "ece": 0.09928722630114666,
+                "auroc": 0.5535714285714286,
+                "logloss": 0.5948118779602088
+              },
+              "val_calibrated": {
+                "brier": 0.18739980095502334,
+                "ece": 6.896551724142238e-05,
+                "auroc": 0.6279761904761905,
+                "logloss": 0.5472653971409769
+              },
+              "bootstrap_ci_95": [
+                0.14029493431244616,
+                0.2385385516286035
+              ],
+              "feature_importance": {
+                "day_of_week": 0.08792632819913822,
+                "days_to_current_expiry": 0.0037747355095255914,
+                "is_monthly_expiry_week": 0.07227452149272225,
+                "days_to_next_holiday": 0.020782454048848754,
+                "riv_level": 0.07254442536258732,
+                "riv_change_1d": 0.03846677211456784,
+                "riv_change_3d": 0.0810903325422166,
+                "iv_term_structure_slope": 0.01689111521775699,
+                "iv_skew_25d": 0.04725870495938567,
+                "iv_rv_spread_5d": 0.11872516458938791,
+                "iv_rv_spread_10d": 0.06417373949970377,
+                "pcr_volume": 0.07847477913715152,
+                "pcr_oi": 0.006988649963348777,
+                "oi_change_net_1d": 0.06006250355193465,
+                "volume_zscore_session": 0.0142387719391468
+              }
+            }
+          },
+          {
+            "fold": 6,
+            "n_train": 323,
+            "n_val": 62,
+            "n_positive_train": 77,
+            "n_positive_val": 15,
+            "xgboost": {
+              "best_params": {
+                "subsample": 0.9,
+                "reg_lambda": 5.0,
+                "reg_alpha": 0.01,
+                "n_estimators": 50,
+                "min_child_weight": 20,
+                "max_depth": 3,
+                "learning_rate": 0.15,
+                "colsample_bytree": 1.0
+              },
+              "train_brier": 0.15143988048786394,
+              "val_raw": {
+                "brier": 0.16503576153998015,
+                "ece": 0.06746688965828188,
+                "auroc": 0.7404255319148936,
+                "logloss": 0.5015135651412335
+              },
+              "val_calibrated": {
+                "brier": 0.13643286337721372,
+                "ece": 0.00022581009937811295,
+                "auroc": 0.8056737588652482,
+                "logloss": 0.4125627665913503
+              },
+              "bootstrap_ci_95": [
+                0.08870747335977107,
+                0.1893137989855096
+              ],
+              "train_val_gap": 0.015007017110650223,
+              "shap_importance": {
+                "day_of_week": 4.277389049530029,
+                "days_to_current_expiry": 0.0,
+                "is_monthly_expiry_week": 0.0,
+                "days_to_next_holiday": 0.0,
+                "riv_level": 2.3740968704223633,
+                "riv_change_1d": 3.481243848800659,
+                "riv_change_3d": 3.873112201690674,
+                "iv_term_structure_slope": 2.948171854019165,
+                "iv_skew_25d": 2.9440183639526367,
+                "iv_rv_spread_5d": 6.921287536621094,
+                "iv_rv_spread_10d": 2.058190107345581,
+                "pcr_volume": 3.231017589569092,
+                "pcr_oi": 1.9718647003173828,
+                "oi_change_net_1d": 6.410560131072998,
+                "volume_zscore_session": 1.3284050226211548
+              }
+            },
+            "logistic": {
+              "best_params": {
+                "logistic__C": 0.01
+              },
+              "train_brier": 0.17223082379627358,
+              "val_raw": {
+                "brier": 0.18339592849335676,
+                "ece": 0.04662770250720543,
+                "auroc": 0.5829787234042554,
+                "logloss": 0.5528442321740634
+              },
+              "val_calibrated": {
+                "brier": 0.16766519508448546,
+                "ece": 6.451612903231179e-05,
+                "auroc": 0.6758865248226952,
+                "logloss": 0.5032579315859677
+              },
+              "bootstrap_ci_95": [
+                0.1206943377962475,
+                0.22240243434825543
+              ],
+              "feature_importance": {
+                "day_of_week": 0.10414631581197678,
+                "days_to_current_expiry": 0.009227564733742361,
+                "is_monthly_expiry_week": 0.07953961924385011,
+                "days_to_next_holiday": 0.02474292313569391,
+                "riv_level": 0.07058749496478067,
+                "riv_change_1d": 0.03617448214136875,
+                "riv_change_3d": 0.0770703754297496,
+                "iv_term_structure_slope": 0.04193383076998324,
+                "iv_skew_25d": 0.06175185980639443,
+                "iv_rv_spread_5d": 0.11322534953918438,
+                "iv_rv_spread_10d": 0.058036594094710674,
+                "pcr_volume": 0.06938024506790784,
+                "pcr_oi": 0.014172573739324228,
+                "oi_change_net_1d": 0.06472078756252501,
+                "volume_zscore_session": 0.01189180177372845
+              }
+            }
+          }
+        ]
+      },
+      "horizon_short": {
+        "aggregate": {
+          "status": "OK",
+          "n_valid_folds": 6,
+          "xgboost": {
+            "brier_mean": 0.1648430327181143,
+            "brier_std": 0.024641528674929882,
+            "ece_mean": 0.03440471415673444,
+            "auroc_mean": 0.5835766052452728,
+            "train_val_gap_mean": 0.0007767931120006242
+          },
+          "logistic": {
+            "brier_mean": 0.15127257760797716,
+            "brier_std": 0.03765699896545695
+          },
+          "shap_stability_kendall_tau": {
+            "mean_tau": 0.4438095238095238,
+            "std_tau": 0.34617093458088255,
+            "n_pairs": 15
+          },
+          "baseline_comparison": {
+            "best_baseline": "riv_momentum",
+            "best_baseline_brier": 0.16797932720514328,
+            "xgb_improvement": 0.0031362944870289844,
+            "beats_baseline_0.02": "False"
+          }
+        },
+        "folds": [
+          {
+            "fold": 1,
+            "n_train": 147,
+            "n_val": 57,
+            "n_positive_train": 39,
+            "n_positive_val": 6,
+            "xgboost": {
+              "best_params": {
+                "subsample": 0.9,
+                "reg_lambda": 5.0,
+                "reg_alpha": 0.01,
+                "n_estimators": 50,
+                "min_child_weight": 20,
+                "max_depth": 3,
+                "learning_rate": 0.15,
+                "colsample_bytree": 1.0
+              },
+              "train_brier": 0.19495221813128655,
+              "val_raw": {
+                "brier": 0.12168082371512487,
+                "ece": 0.16582520384537547,
+                "auroc": 0.5,
+                "logloss": 0.42031936271643644
+              },
+              "val_calibrated": {
+                "brier": 0.12168082371512487,
+                "ece": 0.16582520384537547,
+                "auroc": 0.5,
+                "logloss": 0.42031936271643644
+              },
+              "bootstrap_ci_95": [
+                0.08955287448566694,
+                0.16184076025194727
+              ],
+              "train_val_gap": 0.07327139441616168,
+              "shap_importance": {
+                "day_of_week": 0.0,
+                "days_to_current_expiry": 0.0,
+                "is_monthly_expiry_week": 0.0,
+                "days_to_next_holiday": 0.0,
+                "riv_level": 0.0,
+                "riv_change_1d": 0.0,
+                "riv_change_3d": 0.0,
+                "iv_term_structure_slope": 0.0,
+                "iv_skew_25d": 0.0,
+                "iv_rv_spread_5d": 0.0,
+                "iv_rv_spread_10d": 0.0,
+                "pcr_volume": 0.0,
+                "pcr_oi": 0.0,
+                "oi_change_net_1d": 0.0,
+                "volume_zscore_session": 0.0
+              }
+            },
+            "logistic": {
+              "best_params": {
+                "logistic__C": 0.01
+              },
+              "train_brier": 0.18340569579739302,
+              "val_raw": {
+                "brier": 0.12054296999128922,
+                "ece": 0.16932869953558105,
+                "auroc": 0.6699346405228759,
+                "logloss": 0.4165582439933515
+              },
+              "val_calibrated": {
+                "brier": 0.08433052950558215,
+                "ece": 0.00038596491228071254,
+                "auroc": 0.7794117647058824,
+                "logloss": 0.2721048013830242
+              },
+              "bootstrap_ci_95": [
+                0.036776250010874305,
+                0.13663134870233437
+              ],
+              "feature_importance": {
+                "day_of_week": 0.09768679664328528,
+                "days_to_current_expiry": 0.012806529068261342,
+                "is_monthly_expiry_week": 0.008612545447806558,
+                "days_to_next_holiday": 0.07173726278053774,
+                "riv_level": 0.003506844424494725,
+                "riv_change_1d": 0.08669749544215066,
+                "riv_change_3d": 0.0656595023648069,
+                "iv_term_structure_slope": 0.040560041980664,
+                "iv_skew_25d": 0.004703427420919361,
+                "iv_rv_spread_5d": 0.02589607849681672,
+                "iv_rv_spread_10d": 0.03869652017489591,
+                "pcr_volume": 0.015190750657253381,
+                "pcr_oi": 0.01930188261993456,
+                "oi_change_net_1d": 0.06559256927447049,
+                "volume_zscore_session": 0.03400198347622464
+              }
+            }
+          },
+          {
+            "fold": 2,
+            "n_train": 186,
+            "n_val": 62,
+            "n_positive_train": 46,
+            "n_positive_val": 14,
+            "xgboost": {
+              "best_params": {
+                "subsample": 0.9,
+                "reg_lambda": 5.0,
+                "reg_alpha": 0.01,
+                "n_estimators": 50,
+                "min_child_weight": 20,
+                "max_depth": 3,
+                "learning_rate": 0.15,
+                "colsample_bytree": 1.0
+              },
+              "train_brier": 0.1861537059982983,
+              "val_raw": {
+                "brier": 0.1753817482214185,
+                "ece": 0.023745530074642557,
+                "auroc": 0.5,
+                "logloss": 0.5356985073404188
+              },
+              "val_calibrated": {
+                "brier": 0.1753817482214185,
+                "ece": 0.023745530074642557,
+                "auroc": 0.5,
+                "logloss": 0.5356985073404188
+              },
+              "bootstrap_ci_95": [
+                0.1269079382254597,
+                0.23193452655003718
+              ],
+              "train_val_gap": 0.01077195777687981,
+              "shap_importance": {
+                "day_of_week": 0.0,
+                "days_to_current_expiry": 0.0,
+                "is_monthly_expiry_week": 0.0,
+                "days_to_next_holiday": 0.0,
+                "riv_level": 0.0,
+                "riv_change_1d": 0.0,
+                "riv_change_3d": 0.0,
+                "iv_term_structure_slope": 0.0,
+                "iv_skew_25d": 0.0,
+                "iv_rv_spread_5d": 0.0,
+                "iv_rv_spread_10d": 0.0,
+                "pcr_volume": 0.0,
+                "pcr_oi": 0.0,
+                "oi_change_net_1d": 0.0,
+                "volume_zscore_session": 0.0
+              }
+            },
+            "logistic": {
+              "best_params": {
+                "logistic__C": 0.01
+              },
+              "train_brier": 0.17483739704330775,
+              "val_raw": {
+                "brier": 0.1677913549331364,
+                "ece": 0.013368075992204072,
+                "auroc": 0.7380952380952381,
+                "logloss": 0.5144515853737944
+              },
+              "val_calibrated": {
+                "brier": 0.14310195164070588,
+                "ece": 0.0001451612903226027,
+                "auroc": 0.7767857142857142,
+                "logloss": 0.42860392907377587
+              },
+              "bootstrap_ci_95": [
+                0.09824343579175823,
+                0.19026017939825482
+              ],
+              "feature_importance": {
+                "day_of_week": 0.09541709055035026,
+                "days_to_current_expiry": 0.022969694652519048,
+                "is_monthly_expiry_week": 0.0031669789818323055,
+                "days_to_next_holiday": 0.04997325509905149,
+                "riv_level": 0.006644441408787716,
+                "riv_change_1d": 0.11067091610393608,
+                "riv_change_3d": 0.10623408835419561,
+                "iv_term_structure_slope": 0.04494228133549127,
+                "iv_skew_25d": 0.00781184916688985,
+                "iv_rv_spread_5d": 0.015353540887713015,
+                "iv_rv_spread_10d": 0.034052484022697074,
+                "pcr_volume": 0.014336590553240493,
+                "pcr_oi": 0.011923022958832633,
+                "oi_change_net_1d": 0.07302343268573057,
+                "volume_zscore_session": 0.035100802349212853
+              }
+            }
+          },
+          {
+            "fold": 3,
+            "n_train": 225,
+            "n_val": 64,
+            "n_positive_train": 49,
+            "n_positive_val": 13,
+            "xgboost": {
+              "best_params": {
+                "subsample": 0.9,
+                "reg_lambda": 5.0,
+                "reg_alpha": 0.01,
+                "n_estimators": 50,
+                "min_child_weight": 20,
+                "max_depth": 3,
+                "learning_rate": 0.15,
+                "colsample_bytree": 1.0
+              },
+              "train_brier": 0.1703540537101523,
+              "val_raw": {
+                "brier": 0.16213770016497997,
+                "ece": 0.016506537795066833,
+                "auroc": 0.5,
+                "logloss": 0.5055139812070105
+              },
+              "val_calibrated": {
+                "brier": 0.16213770016497997,
+                "ece": 0.016506537795066833,
+                "auroc": 0.5,
+                "logloss": 0.5055139812070105
+              },
+              "bootstrap_ci_95": [
+                0.109568613501555,
+                0.21470678682840494
+              ],
+              "train_val_gap": 0.008216353545172334,
+              "shap_importance": {
+                "day_of_week": 0.0,
+                "days_to_current_expiry": 0.0,
+                "is_monthly_expiry_week": 0.0,
+                "days_to_next_holiday": 0.0,
+                "riv_level": 0.0,
+                "riv_change_1d": 0.0,
+                "riv_change_3d": 0.0,
+                "iv_term_structure_slope": 0.0,
+                "iv_skew_25d": 0.0,
+                "iv_rv_spread_5d": 0.0,
+                "iv_rv_spread_10d": 0.0,
+                "pcr_volume": 0.0,
+                "pcr_oi": 0.0,
+                "oi_change_net_1d": 0.0,
+                "volume_zscore_session": 0.0
+              }
+            },
+            "logistic": {
+              "best_params": {
+                "logistic__C": 0.01
+              },
+              "train_brier": 0.15846270309554109,
+              "val_raw": {
+                "brier": 0.15311333033192187,
+                "ece": 0.10993584120657199,
+                "auroc": 0.722473604826546,
+                "logloss": 0.4783070776016801
+              },
+              "val_calibrated": {
+                "brier": 0.13278422509057972,
+                "ece": 3.125000000001087e-05,
+                "auroc": 0.7790346907993967,
+                "logloss": 0.4122368106450672
+              },
+              "bootstrap_ci_95": [
+                0.08501426087239501,
+                0.17981823117837983
+              ],
+              "feature_importance": {
+                "day_of_week": 0.09285567424265816,
+                "days_to_current_expiry": 0.10416828849104919,
+                "is_monthly_expiry_week": 0.006948377905075332,
+                "days_to_next_holiday": 0.06348385642576286,
+                "riv_level": 0.004213739945141369,
+                "riv_change_1d": 0.1159406504371583,
+                "riv_change_3d": 0.11668752478894712,
+                "iv_term_structure_slope": 0.04795408356692931,
+                "iv_skew_25d": 0.01324883176320964,
+                "iv_rv_spread_5d": 0.0015782738928444024,
+                "iv_rv_spread_10d": 0.036280377761265296,
+                "pcr_volume": 0.013287746763614829,
+                "pcr_oi": 0.022620438254200174,
+                "oi_change_net_1d": 0.06233980988625974,
+                "volume_zscore_session": 0.05359404129356857
+              }
+            }
+          },
+          {
+            "fold": 4,
+            "n_train": 269,
+            "n_val": 63,
+            "n_positive_train": 63,
+            "n_positive_val": 14,
+            "xgboost": {
+              "best_params": {
+                "subsample": 0.9,
+                "reg_lambda": 5.0,
+                "reg_alpha": 0.01,
+                "n_estimators": 50,
+                "min_child_weight": 20,
+                "max_depth": 3,
+                "learning_rate": 0.15,
+                "colsample_bytree": 1.0
+              },
+              "train_brier": 0.15507300943241076,
+              "val_raw": {
+                "brier": 0.1677269342761752,
+                "ece": 0.07736249800239291,
+                "auroc": 0.6435860058309039,
+                "logloss": 0.5090336536522472
+              },
+              "val_calibrated": {
+                "brier": 0.14857163492065453,
+                "ece": 0.00020635300057215075,
+                "auroc": 0.7419825072886298,
+                "logloss": 0.4417467486542804
+              },
+              "bootstrap_ci_95": [
+                0.10543644510680908,
+                0.1989182694833648
+              ],
+              "train_val_gap": 0.006501374511756225,
+              "shap_importance": {
+                "day_of_week": 0.0,
+                "days_to_current_expiry": 2.482194185256958,
+                "is_monthly_expiry_week": 0.0,
+                "days_to_next_holiday": 1.849300742149353,
+                "riv_level": 0.0,
+                "riv_change_1d": 4.1210246086120605,
+                "riv_change_3d": 4.484686374664307,
+                "iv_term_structure_slope": 3.877293825149536,
+                "iv_skew_25d": 0.0,
+                "iv_rv_spread_5d": 2.2614705562591553,
+                "iv_rv_spread_10d": 3.6429388523101807,
+                "pcr_volume": 1.914876937866211,
+                "pcr_oi": 0.0,
+                "oi_change_net_1d": 0.0,
+                "volume_zscore_session": 2.541651725769043
+              }
+            },
+            "logistic": {
+              "best_params": {
+                "logistic__C": 0.01
+              },
+              "train_brier": 0.1658731132979304,
+              "val_raw": {
+                "brier": 0.1721899518196784,
+                "ece": 0.016826863521906602,
+                "auroc": 0.555393586005831,
+                "logloss": 0.5284267623445994
+              },
+              "val_calibrated": {
+                "brier": 0.1638186533758639,
+                "ece": 1.5873015873024244e-05,
+                "auroc": 0.629737609329446,
+                "logloss": 0.5044959286719696
+              },
+              "bootstrap_ci_95": [
+                0.11357526626927698,
+                0.22264280623585347
+              ],
+              "feature_importance": {
+                "day_of_week": 0.12308806260327095,
+                "days_to_current_expiry": 0.06354659043021478,
+                "is_monthly_expiry_week": 0.02685769593437025,
+                "days_to_next_holiday": 0.07542427404808773,
+                "riv_level": 0.007122495956531452,
+                "riv_change_1d": 0.1296736256165765,
+                "riv_change_3d": 0.15375911276529025,
+                "iv_term_structure_slope": 0.038716566901406534,
+                "iv_skew_25d": 0.024164276409567784,
+                "iv_rv_spread_5d": 0.006062981112130351,
+                "iv_rv_spread_10d": 0.014424368168835416,
+                "pcr_volume": 0.04777745849640532,
+                "pcr_oi": 0.045673288214358496,
+                "oi_change_net_1d": 0.07392452295455068,
+                "volume_zscore_session": 0.04205627013642517
+              }
+            }
+          },
+          {
+            "fold": 5,
+            "n_train": 291,
+            "n_val": 62,
+            "n_positive_train": 66,
+            "n_positive_val": 17,
+            "xgboost": {
+              "best_params": {
+                "subsample": 0.9,
+                "reg_lambda": 5.0,
+                "reg_alpha": 0.01,
+                "n_estimators": 50,
+                "min_child_weight": 20,
+                "max_depth": 3,
+                "learning_rate": 0.15,
+                "colsample_bytree": 1.0
+              },
+              "train_brier": 0.1457687411622656,
+              "val_raw": {
+                "brier": 0.20359278515525703,
+                "ece": 0.10906675433920275,
+                "auroc": 0.5405228758169935,
+                "logloss": 0.5959503030907248
+              },
+              "val_calibrated": {
+                "brier": 0.1849064190553714,
+                "ece": 0.0001129082783365642,
+                "auroc": 0.6483660130718955,
+                "logloss": 0.5380244686739853
+              },
+              "bootstrap_ci_95": [
+                0.13872539860458188,
+                0.23436010577035224
+              ],
+              "train_val_gap": -0.03913767789310579,
+              "shap_importance": {
+                "day_of_week": 6.719289779663086,
+                "days_to_current_expiry": 0.0,
+                "is_monthly_expiry_week": 0.0,
+                "days_to_next_holiday": 1.7776237726211548,
+                "riv_level": 0.0,
+                "riv_change_1d": 3.3984603881835938,
+                "riv_change_3d": 5.441919803619385,
+                "iv_term_structure_slope": 4.610901832580566,
+                "iv_skew_25d": 0.0,
+                "iv_rv_spread_5d": 2.3105356693267822,
+                "iv_rv_spread_10d": 3.3099052906036377,
+                "pcr_volume": 2.0946645736694336,
+                "pcr_oi": 0.0,
+                "oi_change_net_1d": 0.0,
+                "volume_zscore_session": 3.0787200927734375
+              }
+            },
+            "logistic": {
+              "best_params": {
+                "logistic__C": 0.01
+              },
+              "train_brier": 0.16238571895286422,
+              "val_raw": {
+                "brier": 0.19891652138454188,
+                "ece": 0.06161867583460853,
+                "auroc": 0.603921568627451,
+                "logloss": 0.5862272340312563
+              },
+              "val_calibrated": {
+                "brier": 0.18241589691444599,
+                "ece": 4.838709677423473e-05,
+                "auroc": 0.676470588235294,
+                "logloss": 0.5391972664488299
+              },
+              "bootstrap_ci_95": [
+                0.13339254892310815,
+                0.2345381480674375
+              ],
+              "feature_importance": {
+                "day_of_week": 0.10744483407142137,
+                "days_to_current_expiry": 0.08596089539802633,
+                "is_monthly_expiry_week": 0.04134668530527197,
+                "days_to_next_holiday": 0.07747338502708256,
+                "riv_level": 0.005270139814002029,
+                "riv_change_1d": 0.11578144744851804,
+                "riv_change_3d": 0.16198804282221416,
+                "iv_term_structure_slope": 0.04473153033255181,
+                "iv_skew_25d": 0.028516067492654288,
+                "iv_rv_spread_5d": 0.02286500045265342,
+                "iv_rv_spread_10d": 0.012979870894193207,
+                "pcr_volume": 0.07132667165759435,
+                "pcr_oi": 0.045087644945049785,
+                "oi_change_net_1d": 0.06530480022100524,
+                "volume_zscore_session": 0.040561011594534936
+              }
+            }
+          },
+          {
+            "fold": 6,
+            "n_train": 319,
+            "n_val": 63,
+            "n_positive_train": 73,
+            "n_positive_val": 18,
+            "xgboost": {
+              "best_params": {
+                "subsample": 0.9,
+                "reg_lambda": 5.0,
+                "reg_alpha": 0.01,
+                "n_estimators": 50,
+                "min_child_weight": 20,
+                "max_depth": 3,
+                "learning_rate": 0.15,
+                "colsample_bytree": 1.0
+              },
+              "train_brier": 0.14141722654627595,
+              "val_raw": {
+                "brier": 0.21392549888110016,
+                "ece": 0.09063001899492172,
+                "auroc": 0.5320987654320988,
+                "logloss": 0.6291575307889605
+              },
+              "val_calibrated": {
+                "brier": 0.19637987023113646,
+                "ece": 3.1751946413085963e-05,
+                "auroc": 0.611111111111111,
+                "logloss": 0.5753759606706643
+              },
+              "bootstrap_ci_95": [
+                0.14821438356382127,
+                0.24653337260787803
+              ],
+              "train_val_gap": -0.05496264368486051,
+              "shap_importance": {
+                "day_of_week": 9.607294082641602,
+                "days_to_current_expiry": 4.49038553237915,
+                "is_monthly_expiry_week": 0.0,
+                "days_to_next_holiday": 2.6165428161621094,
+                "riv_level": 2.296210289001465,
+                "riv_change_1d": 2.935298204421997,
+                "riv_change_3d": 6.633808612823486,
+                "iv_term_structure_slope": 6.371892929077148,
+                "iv_skew_25d": 0.0,
+                "iv_rv_spread_5d": 2.8805229663848877,
+                "iv_rv_spread_10d": 3.357593297958374,
+                "pcr_volume": 2.707448959350586,
+                "pcr_oi": 1.964334487915039,
+                "oi_change_net_1d": 1.3874213695526123,
+                "volume_zscore_session": 3.4210760593414307
+              }
+            },
+            "logistic": {
+              "best_params": {
+                "logistic__C": 0.01
+              },
+              "train_brier": 0.16350980052087394,
+              "val_raw": {
+                "brier": 0.21412858991626163,
+                "ece": 0.08936033408369394,
+                "auroc": 0.45679012345679015,
+                "logloss": 0.6260571110484836
+              },
+              "val_calibrated": {
+                "brier": 0.20118420912068524,
+                "ece": 3.1746031746053774e-05,
+                "auroc": 0.5382716049382716,
+                "logloss": 0.5868720809740583
+              },
+              "bootstrap_ci_95": [
+                0.1558162939551364,
+                0.25002491496488655
+              ],
+              "feature_importance": {
+                "day_of_week": 0.12491432458611215,
+                "days_to_current_expiry": 0.09859081879037183,
+                "is_monthly_expiry_week": 0.054737290354108556,
+                "days_to_next_holiday": 0.07064177679710247,
+                "riv_level": 0.009939709562004868,
+                "riv_change_1d": 0.11426283099130187,
+                "riv_change_3d": 0.16099566735863713,
+                "iv_term_structure_slope": 0.016368091306855213,
+                "iv_skew_25d": 0.0035343951671114784,
+                "iv_rv_spread_5d": 0.018336790831332876,
+                "iv_rv_spread_10d": 0.0015011636152881874,
+                "pcr_volume": 0.05466090353041482,
+                "pcr_oi": 0.07696327106275551,
+                "oi_change_net_1d": 0.06978090092951113,
+                "volume_zscore_session": 0.05369417327558296
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

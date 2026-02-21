@@ -218,7 +218,7 @@ def compute_test_baselines(train_all, test_h, target):
         bin_probs = {}
         for b in range(n_bins):
             mask = bin_indices == b
-            bin_probs[b] = float(train_valid.loc[mask.values, target].mean()) if mask.sum() > 0 else base_rate
+            bin_probs[b] = float(train_valid[target].values[mask].mean()) if mask.sum() > 0 else base_rate
 
         mom_preds = []
         for _, row in test_h.iterrows():

@@ -1,0 +1,146 @@
+{
+  "generated": "2026-02-21 04:54:09",
+  "spec_references": [
+    "Governance \u00a710.2 (partitioning documented before training)",
+    "Part IV \u00a77.2.2 (walk-forward, purge gap = max(T) = 5)",
+    "Part IV \u00a77.2.2 (min_walkforward_folds = 5)"
+  ],
+  "design_principles": [
+    "Mechanical expanding walk-forward \u2014 no manual regime-aware placement",
+    "Percentage-based boundaries on trading day index",
+    "Feature preprocessing refit inside each fold",
+    "Regime analysis is post-evaluation diagnostic only"
+  ],
+  "parameters": {
+    "n_folds": 6,
+    "purge_gap_days": 5,
+    "test_holdout_pct": 0.15,
+    "fold_train_end_pcts": [
+      0.4,
+      0.5,
+      0.6,
+      0.7,
+      0.75,
+      0.82
+    ],
+    "fold_val_size_pct": 0.15
+  },
+  "dropped_features": [
+    "time_of_day_bucket",
+    "iv_percentile_rank"
+  ],
+  "dropped_features_rationale": {
+    "time_of_day_bucket": "Constant value (19), zero variance, infinite VIF \u2014 structurally constant in v1",
+    "iv_percentile_rank": "49% UNAVAILABLE + r=0.92 with riv_level (\u00a75.4.1 threshold exceeded) \u2014 Specification-Constrained Omission"
+  },
+  "modelling_features": [
+    "day_of_week",
+    "days_to_current_expiry",
+    "is_monthly_expiry_week",
+    "days_to_next_holiday",
+    "riv_level",
+    "riv_change_1d",
+    "riv_change_3d",
+    "iv_term_structure_slope",
+    "iv_skew_25d",
+    "iv_rv_spread_5d",
+    "iv_rv_spread_10d",
+    "pcr_volume",
+    "pcr_oi",
+    "oi_change_net_1d",
+    "volume_zscore_session"
+  ],
+  "n_modelling_features": 15,
+  "folds": [
+    {
+      "fold": 1,
+      "train_start": "2024-01-01",
+      "train_end": "2024-09-23",
+      "train_days": 179,
+      "purge_start": "2024-09-24",
+      "purge_end": "2024-09-30",
+      "purge_days": 5,
+      "val_start": "2024-10-01",
+      "val_end": "2025-01-07",
+      "val_days": 67,
+      "n_train_eligible": 300,
+      "n_val_eligible": 114
+    },
+    {
+      "fold": 2,
+      "train_start": "2024-01-01",
+      "train_end": "2024-11-28",
+      "train_days": 224,
+      "purge_start": "2024-11-29",
+      "purge_end": "2024-12-05",
+      "purge_days": 5,
+      "val_start": "2024-12-06",
+      "val_end": "2025-03-12",
+      "val_days": 67,
+      "n_train_eligible": 372,
+      "n_val_eligible": 122
+    },
+    {
+      "fold": 3,
+      "train_start": "2024-01-01",
+      "train_end": "2025-01-30",
+      "train_days": 268,
+      "purge_start": "2025-01-31",
+      "purge_end": "2025-02-06",
+      "purge_days": 5,
+      "val_start": "2025-02-07",
+      "val_end": "2025-05-21",
+      "val_days": 67,
+      "n_train_eligible": 453,
+      "n_val_eligible": 121
+    },
+    {
+      "fold": 4,
+      "train_start": "2024-01-01",
+      "train_end": "2025-04-08",
+      "train_days": 313,
+      "purge_start": "2025-04-09",
+      "purge_end": "2025-04-17",
+      "purge_days": 5,
+      "val_start": "2025-04-21",
+      "val_end": "2025-07-23",
+      "val_days": 67,
+      "n_train_eligible": 534,
+      "n_val_eligible": 125
+    },
+    {
+      "fold": 5,
+      "train_start": "2024-01-01",
+      "train_end": "2025-05-15",
+      "train_days": 336,
+      "purge_start": "2025-05-16",
+      "purge_end": "2025-05-22",
+      "purge_days": 5,
+      "val_start": "2025-05-23",
+      "val_end": "2025-08-26",
+      "val_days": 67,
+      "n_train_eligible": 575,
+      "n_val_eligible": 130
+    },
+    {
+      "fold": 6,
+      "train_start": "2024-01-01",
+      "train_end": "2025-06-27",
+      "train_days": 367,
+      "purge_start": "2025-06-30",
+      "purge_end": "2025-07-04",
+      "purge_days": 5,
+      "val_start": "2025-07-07",
+      "val_end": "2025-10-10",
+      "val_days": 67,
+      "n_train_eligible": 633,
+      "n_val_eligible": 131
+    }
+  ],
+  "test": {
+    "test_start": "2025-10-27",
+    "test_end": "2026-02-19",
+    "test_days": 80,
+    "n_test_eligible": 143
+  }
+}
